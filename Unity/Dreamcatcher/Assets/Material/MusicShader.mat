@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MusicShader
+  m_Shader: {fileID: 4800000, guid: 8c62761a0a970ea43bd9b886f07eaa5e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs: {}
+    m_Floats:
+      data:
+        first:
+          name: _Intensity0
+        second: 0
+      data:
+        first:
+          name: _Intensity1
+        second: 0
+      data:
+        first:
+          name: _Intensity2
+        second: 0
+      data:
+        first:
+          name: _Intensity3
+        second: 0
+      data:
+        first:
+          name: _Intensity4
+        second: 0
+      data:
+        first:
+          name: _Intensity5
+        second: 0
+      data:
+        first:
+          name: _Intensity6
+        second: 0
+      data:
+        first:
+          name: _Intensity7
+        second: 0
+      data:
+        first:
+          name: _Intensity8
+        second: 0
+      data:
+        first:
+          name: _Intensity9
+        second: 0
+      data:
+        first:
+          name: _Intensity10
+        second: 0
+      data:
+        first:
+          name: _Intensity11
+        second: 0
+      data:
+        first:
+          name: _Intensity12
+        second: 0
+      data:
+        first:
+          name: _Intensity13
+        second: 0
+      data:
+        first:
+          name: _Intensity14
+        second: 0
+      data:
+        first:
+          name: _Intensity15
+        second: 0
+      data:
+        first:
+          name: _ColumnWidth
+        second: 2
+      data:
+        first:
+          name: _ColumnHeight
+        second: 20
+      data:
+        first:
+          name: _HeightDisplacementFactor
+        second: 5
+      data:
+        first:
+          name: _OffSetX
+        second: 0
+    m_Colors: {}

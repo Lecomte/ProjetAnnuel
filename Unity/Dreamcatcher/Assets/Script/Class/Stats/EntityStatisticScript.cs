@@ -11,7 +11,7 @@ public class EntityStatisticScript : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        this.CurrentHealth -= damage - this.Resistance;
+        this.CurrentHealth -= (damage - this.Resistance);
     }
 
     public void TemporaryIncreaseDamage(int value, int secondes)

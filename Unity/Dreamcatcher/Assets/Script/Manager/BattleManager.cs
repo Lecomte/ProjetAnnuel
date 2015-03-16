@@ -3,20 +3,46 @@ using System.Collections;
 using UnityEngine.Events;
 
 public class BattleManager : MonoBehaviour {
-
-    public UnityEvent SpawnEnnemyEvent;
-    public UnityEvent KillEnnemyEvent;
+	
+    public UnityEvent KillEnemyEvent;
 
     public DamageEvent TakeDamage;
 
-    [SerializeField]
-    private UnitManager unitManager;
+	public UnityEvent<string>	EnemySpawnEvent;
+	public ColliderEvent		EnemyDeathEvent;
 
-    public void fireSpawnEnnemyEvent()
-    {
-        if (this.SpawnEnnemyEvent != null)
-            this.SpawnEnnemyEvent.Invoke();
-    }
+    [SerializeField]
+    private UnitManager 		unitManager;
+	private UnitStatManager 	unitStatManager;
+
+	public void Start()
+	{
+		this.EnemyDeathEvent.AddListener (unitManager.OnUnitDeath);
+	}
+
+	public float GetBPM()
+	{
+		return 5f;
+	}
+
+	public float GetIntensity()
+	{
+
+        return 4f;
+	}
+
+
+	public void fireEnemySpawnEvent( string name)
+	{
+		if (this.EnemySpawnEvent != null)
+			this.EnemySpawnEvent.Invoke (name);
+	}
+	
+	public void fireEnemyDeath(Collider collider)
+	{
+		if (this.EnemyDeathEvent != null)
+			this.EnemyDeathEvent.Invoke (collider);
+	}
 
     public void fireTakeDamageScript(Collider collider)
     {

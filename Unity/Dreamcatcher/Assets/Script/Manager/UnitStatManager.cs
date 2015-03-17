@@ -14,9 +14,9 @@ public class UnitStatManager : MonoBehaviour {
 
 	public void InitStats ( EntityStatisticScript script, float levelIntensity)
 	{
-		script.Damage = levelIntensity * 4f * StatVariation() ;
-		script.CurrentHealth = levelIntensity * 20f  * StatVariation();
-		script.Resistance = levelIntensity * 2f  * StatVariation();
+		script.Damage = (int)(levelIntensity * 4f * StatVariation()) ;
+		script.CurrentHealth = (int) (levelIntensity * 20f  * StatVariation() );
+		script.Resistance = (int) (levelIntensity * 2f  * StatVariation() );
 	}
 
 	private float StatVariation()

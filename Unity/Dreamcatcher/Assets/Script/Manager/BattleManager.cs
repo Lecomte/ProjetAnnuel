@@ -8,29 +8,18 @@ public class BattleManager : MonoBehaviour {
 
     public DamageEvent TakeDamage;
 
-	public UnityEvent<string>	EnemySpawnEvent;
+	public StringEvent			EnemySpawnEvent;
 	public ColliderEvent		EnemyDeathEvent;
 
     [SerializeField]
     private UnitManager 		unitManager;
-	private UnitStatManager 	unitStatManager;
 
 	public void Start()
 	{
-		this.EnemyDeathEvent.AddListener (unitManager.OnUnitDeath);
+		this.EnemySpawnEvent = new StringEvent ();
+		this.EnemyDeathEvent = new ColliderEvent ();
+		this.TakeDamage 	 = new DamageEvent();
 	}
-
-	public float GetBPM()
-	{
-		return 5f;
-	}
-
-	public float GetIntensity()
-	{
-
-        return 4f;
-	}
-
 
 	public void fireEnemySpawnEvent( string name)
 	{

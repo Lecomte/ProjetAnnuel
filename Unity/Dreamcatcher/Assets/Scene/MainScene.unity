@@ -1142,9 +1142,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 720604110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f17a44b2ea39544ea5fd6b6da318a11, type: 3}
+  m_Script: {fileID: 11500000, guid: f289fd89195623d4ba74c1589fddbc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitManager: {fileID: 515302937}
 --- !u!1 &769063985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1325,7 @@ Transform:
   - {fileID: 1167168444}
   - {fileID: 720604111}
   - {fileID: 1656676912}
+  - {fileID: 1458728865}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &902994232
@@ -1917,6 +1919,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1622089441}
   m_RootOrder: 6
+--- !u!1 &1458728864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1458728865}
+  - 114: {fileID: 1458728866}
+  m_Layer: 0
+  m_Name: LevelHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1458728865
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458728864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 814463915}
+  m_RootOrder: 6
+--- !u!114 &1458728866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458728864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c0b26da3cee4c4d86f8c4f2f61a4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitStatManager: {fileID: 1656676913}
+  battleManager: {fileID: 319249322}
+  spawnManager: {fileID: 720604112}
+  unitManager: {fileID: 515302937}
 --- !u!1 &1485800673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,7 +2436,7 @@ GameObject:
   - 4: {fileID: 1656676912}
   - 114: {fileID: 1656676913}
   m_Layer: 0
-  m_Name: UnitStatManager
+  m_Name: UnitStatHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2417,7 +2462,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656676911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 957305ed4a3c8fc4c93fc82251025a26, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a517f2da5edf504f871851bd6bc145b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1719758112

@@ -17,4 +17,14 @@ public class UnitManager : MonoBehaviour {
             this.EntityDictionary.Add(EntityClass.collider, EntityClass.script);
         }
     }
+
+    public EntityStatisticScript getEntityStatisticScript(Collider collider)
+    {
+        return this.EntityDictionary[collider];
+    }
+
+    public void infligeDamageToCollider(Collider collider, int damage)
+    {
+        this.EntityDictionary[collider].TakeDamage(damage);
+    }
 }

@@ -8,7 +8,6 @@ public class BattleManager : MonoBehaviour {
     public UnityEvent KillEnnemyEvent;
 
     public DamageEvent TakeDamage;
-
     [SerializeField]
     private UnitManager unitManager;
 

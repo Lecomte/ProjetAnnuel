@@ -8,10 +8,12 @@ public class EntityStatisticScript : MonoBehaviour {
     public int CurrentHealth;
     public int Damage;
     public int Resistance;
+	[SerializeField]
+	public int EntityType;
 
     public void TakeDamage(int damage)
     {
-        this.CurrentHealth -= (damage - this.Resistance);
+		this.CurrentHealth -= Math.Max(0, damage - this.Resistance);
     }
 
     public void TemporaryIncreaseDamage(int value, int secondes)

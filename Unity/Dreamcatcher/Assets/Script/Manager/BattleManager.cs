@@ -8,7 +8,7 @@ public class BattleManager : MonoBehaviour {
 
     public DamageEvent TakeDamage;
 
-	public StringEvent			EnemySpawnEvent;
+	public SpawnEvent			EnemySpawnEvent;
 	public ColliderEvent		EnemyDeathEvent;
 
     [SerializeField]
@@ -16,15 +16,13 @@ public class BattleManager : MonoBehaviour {
 
 	public void Start()
 	{
-		this.EnemySpawnEvent = new StringEvent ();
-		this.EnemyDeathEvent = new ColliderEvent ();
-		this.TakeDamage 	 = new DamageEvent();
+
 	}
 
-	public void fireEnemySpawnEvent( string name)
+	public void fireEnemySpawnEvent( int type)
 	{
 		if (this.EnemySpawnEvent != null)
-			this.EnemySpawnEvent.Invoke (name);
+			this.EnemySpawnEvent.Invoke (type);
 	}
 	
 	public void fireEnemyDeath(Collider collider)

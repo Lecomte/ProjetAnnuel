@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour {
 	public UnitManager unitManager;
 
 
-	public Dictionary<string, List<Collider> >			UnusedUnits;
+	public Dictionary<int, List<Collider> >			UnusedUnits;
 
 	// Use this for initialization
 	void Start () 
@@ -23,17 +23,19 @@ public class SpawnManager : MonoBehaviour {
 
 	public void CreateUnusedUnitsDictionary()
 	{
-		this.UnusedUnits = new Dictionary<string, List<Collider> > ();
+		this.UnusedUnits = new Dictionary<int, List<Collider> > ();
 		
-		foreach (ColliderEntityClass unit in unitManager.colliderEntityList) 
+		foreach (ColliderEntityClass collider_entity_class in unitManager.colliderEntityList) 
 		{
-			if (UnusedUnits.ContainsKey(unit.name) )
-				UnusedUnits[unit.name].Add(unit.collider);
+			EntityStatisticScript unit = unitManager.EntityDictionary [collider_entity_class.collider];
+
+			if (UnusedUnits.ContainsKey(unit.EntityType) )
+				UnusedUnits[unit.EntityType].Add(collider_entity_class.collider);
 			else 
 			{
 				List<Collider> colliders = new List<Collider>();
-				colliders.Add(unit.collider);
-				UnusedUnits.Add(unit.name, colliders);
+				colliders.Add(collider_entity_class.collider);
+				UnusedUnits.Add(unit.EntityType, colliders);
 			}
 		}
 	}
@@ -42,13 +44,14 @@ public class SpawnManager : MonoBehaviour {
 	{
 		EntityStatisticScript unit = unitManager.EntityDictionary [collider];
 		
-		if (UnusedUnits.ContainsKey(unit.name) )
-			UnusedUnits[unit.name].Add(unit.GetComponent<Collider>());
+		if (UnusedUnits.ContainsKey (unit.EntityType)) {
+			UnusedUnits [unit.EntityType].Add (unit.GetComponent<Collider> ());
+		}
 		else 
 		{
 			List<Collider> colliders = new List<Collider>();
 			colliders.Add(unit.GetComponent<Collider>());
-			UnusedUnits.Add(unit.name, colliders);
+			UnusedUnits.Add(unit.EntityType, colliders);
 		}
 	}
 
@@ -57,15 +60,15 @@ public class SpawnManager : MonoBehaviour {
 		AddUnusedUnit (unitCollider);
 	}
 
-	public Collider PullUnit(string name)
+	public Collider PullUnit(int type)
 	{
-		if ( UnusedUnits.ContainsKey(name) )
+		if ( UnusedUnits.ContainsKey(type) )
 		{
-			if( UnusedUnits[name].Count == 0)
+			if( UnusedUnits[type].Count == 0)
 				return null;
 
-			Collider first = UnusedUnits[name][0];
-			UnusedUnits[name].RemoveAt(0);
+			Collider first = UnusedUnits[type][0];
+			UnusedUnits[type].RemoveAt(0);
 			return first;
 		}
 		

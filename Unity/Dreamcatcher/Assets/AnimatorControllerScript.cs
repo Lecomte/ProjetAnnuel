@@ -48,10 +48,10 @@ public class AnimatorControllerScript : StateMachineBehaviour {
             {
                 animator.SetInteger("Button", 4);
             }
-        }
-        else if (Time.timeSinceLevelLoad - startTime > 2.0f)
-        {
-            animator.SetBool("Animating", false);
+            if (Time.timeSinceLevelLoad - startTime > 4.0f)
+            {
+                animator.SetBool("Animating", false);
+            }
         }
 	}
 

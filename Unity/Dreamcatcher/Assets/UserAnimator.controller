@@ -83,7 +83,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B_B_B
   damageCoeff: 1.29999995
 --- !u!114 &11407026
@@ -99,7 +98,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y_Y_B
   damageCoeff: 1.29999995
 --- !u!114 &11408234
@@ -115,7 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y_Y
   damageCoeff: 1.20000005
 --- !u!114 &11419566
@@ -131,7 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B_B
   damageCoeff: 1.20000005
 --- !u!114 &11425742
@@ -147,7 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_B
   damageCoeff: 1.10000002
 --- !u!114 &11430164
@@ -163,7 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B_Y_Y
   damageCoeff: 1.29999995
 --- !u!114 &11431644
@@ -179,7 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_Y_Y
   damageCoeff: 1.39999998
 --- !u!114 &11431822
@@ -195,7 +188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B
   damageCoeff: 1
 --- !u!114 &11435026
@@ -211,7 +203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: X
   damageCoeff: 1
 --- !u!114 &11440798
@@ -227,7 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_X_X
   damageCoeff: 1.39999998
 --- !u!114 &11445754
@@ -243,7 +233,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B_Y_B
   damageCoeff: 1.29999995
 --- !u!114 &11457718
@@ -259,7 +248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: X_X_X
   damageCoeff: 1.29999995
 --- !u!114 &11465290
@@ -275,7 +263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B_B_Y
   damageCoeff: 1.29999995
 --- !u!114 &11471320
@@ -291,7 +278,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y_B_B
   damageCoeff: 1.29999995
 --- !u!114 &11479096
@@ -307,7 +293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_Y_B
   damageCoeff: 1.5
 --- !u!114 &11479516
@@ -323,7 +308,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: X_X
   damageCoeff: 1.20000005
 --- !u!114 &11480902
@@ -339,7 +323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_X
   damageCoeff: 1.10000002
 --- !u!114 &11481950
@@ -355,7 +338,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y_B
   damageCoeff: 1.20000005
 --- !u!114 &11482266
@@ -371,7 +353,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 1
   needToStopActions: 0
-  startTime: 0
   name: Static
   damageCoeff: 0
 --- !u!114 &11483736
@@ -387,7 +368,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_B_Y
   damageCoeff: 1.5
 --- !u!114 &11484366
@@ -403,7 +383,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y_B_Y
   damageCoeff: 1.29999995
 --- !u!114 &11491838
@@ -419,7 +398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A
   damageCoeff: 0
 --- !u!114 &11492422
@@ -435,7 +413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y
   damageCoeff: 1
 --- !u!114 &11492980
@@ -451,7 +428,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_Y
   damageCoeff: 1.10000002
 --- !u!114 &11496188
@@ -467,7 +443,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: Y_Y_Y
   damageCoeff: 1.29999995
 --- !u!114 &11497328
@@ -483,7 +458,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: B_Y
   damageCoeff: 1.20000005
 --- !u!114 &11497958
@@ -499,7 +473,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
-  startTime: 0
   name: A_B_B
   damageCoeff: 1.39999998
 --- !u!1101 &110101910

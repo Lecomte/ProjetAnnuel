@@ -5,7 +5,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
 
     public bool startState = false;
     public bool needToStopActions = false;
-    public float startTime;
+    private float startTime;
     public string name;
     public float damageCoeff;
 

@@ -115,6 +115,30 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_Y
   damageCoeff: 1.20000005
+--- !u!114 &11411682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e665732f3e5c42c49810c1356345e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamageCoeff: 1
+--- !u!114 &11414130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e665732f3e5c42c49810c1356345e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamageCoeff: 1.20000005
 --- !u!114 &11419566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,7 +243,7 @@ MonoBehaviour:
   startState: 0
   needToStopActions: 0
   name: A_X_X
-  damageCoeff: 1.39999998
+  damageCoeff: 1
 --- !u!114 &11445754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +259,18 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_Y_B
   damageCoeff: 1.29999995
+--- !u!114 &11457222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e665732f3e5c42c49810c1356345e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamageCoeff: 2
 --- !u!114 &11457718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,6 +316,30 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_B_B
   damageCoeff: 1.29999995
+--- !u!114 &11472186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e665732f3e5c42c49810c1356345e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamageCoeff: 1.5
+--- !u!114 &11474766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e665732f3e5c42c49810c1356345e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamageCoeff: 1.79999995
 --- !u!114 &11479096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -324,7 +384,7 @@ MonoBehaviour:
   startState: 0
   needToStopActions: 0
   name: A_X
-  damageCoeff: 1.10000002
+  damageCoeff: 1
 --- !u!114 &11481950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -762,9 +822,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .100000001
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: .899999976
+  m_ExitTime: 0
   m_HasExitTime: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -886,7 +946,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .100000001
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: .899999976
   m_HasExitTime: 0
@@ -2029,40 +2089,6 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 0}
   m_Tag: 
---- !u!1102 &110206802
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttackBB
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 416c3bcff5f92c84c83e9566703f2ef6, type: 2}
-  m_Tag: 
---- !u!1102 &110208846
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttackYYY
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 1efdaf78dacad8d4ea4c31acde80a508, type: 2}
-  m_Tag: 
 --- !u!1102 &110214874
 AnimatorState:
   serializedVersion: 5
@@ -2084,23 +2110,6 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: 416c3bcff5f92c84c83e9566703f2ef6, type: 2}
   m_Tag: 
---- !u!1102 &110215666
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttack_Y
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 8ccdd66613808b84a9f38097cd8729ad, type: 2}
-  m_Tag: 
 --- !u!1102 &110216304
 AnimatorState:
   serializedVersion: 5
@@ -2120,7 +2129,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 416c3bcff5f92c84c83e9566703f2ef6, type: 2}
   m_Tag: 
 --- !u!1102 &110225134
 AnimatorState:
@@ -2214,6 +2223,7 @@ AnimatorState:
   - {fileID: 110138722}
   m_StateMachineBehaviours:
   - {fileID: 11440798}
+  - {fileID: 11474766}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2233,6 +2243,7 @@ AnimatorState:
   - {fileID: 110112294}
   m_StateMachineBehaviours:
   - {fileID: 11457718}
+  - {fileID: 11457222}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2261,23 +2272,6 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 0}
   m_Tag: Static
---- !u!1102 &110245420
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttackB
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: a8c69975fe2315441bee4687d448b269, type: 2}
-  m_Tag: 
 --- !u!1102 &110247480
 AnimatorState:
   serializedVersion: 5
@@ -2337,23 +2331,6 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: 416c3bcff5f92c84c83e9566703f2ef6, type: 2}
   m_Tag: 
---- !u!1102 &110256966
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttack
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 5584dcf8664ee6d4ca95ba4b10b22631, type: 2}
-  m_Tag: 
 --- !u!1102 &110262958
 AnimatorState:
   serializedVersion: 5
@@ -2373,7 +2350,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 8ccdd66613808b84a9f38097cd8729ad, type: 2}
   m_Tag: 
 --- !u!1102 &110263074
 AnimatorState:
@@ -2448,6 +2425,7 @@ AnimatorState:
   - {fileID: 110129710}
   m_StateMachineBehaviours:
   - {fileID: 11479516}
+  - {fileID: 11472186}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2472,23 +2450,6 @@ AnimatorState:
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_Motion: {fileID: 0}
-  m_Tag: 
---- !u!1102 &110273882
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttackY
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: ce1f4d3da6d46de42ad2599a55a506c1, type: 2}
   m_Tag: 
 --- !u!1102 &110276248
 AnimatorState:
@@ -2544,6 +2505,7 @@ AnimatorState:
   - {fileID: 110113704}
   m_StateMachineBehaviours:
   - {fileID: 11480902}
+  - {fileID: 11414130}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2585,6 +2547,7 @@ AnimatorState:
   - {fileID: 110114254}
   m_StateMachineBehaviours:
   - {fileID: 11435026}
+  - {fileID: 11411682}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2683,7 +2646,7 @@ AnimatorStateMachine:
     m_Position: {x: 384, y: -72, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110276248}
-    m_Position: {x: 372, y: 192, z: 0}
+    m_Position: {x: 372, y: 168, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110284534}
     m_Position: {x: 84, y: 420, z: 0}
@@ -2756,24 +2719,6 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110233382}
     m_Position: {x: 888, y: 660, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110256966}
-    m_Position: {x: 923, y: 725, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110206802}
-    m_Position: {x: 958, y: 790, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110245420}
-    m_Position: {x: 993, y: 855, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110273882}
-    m_Position: {x: 1028, y: 920, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110215666}
-    m_Position: {x: 1063, y: 985, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 110208846}
-    m_Position: {x: 1098, y: 1050, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110193442}

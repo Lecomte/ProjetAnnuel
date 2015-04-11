@@ -15,7 +15,9 @@ public class AnimatorControllerScript : StateMachineBehaviour {
         animator.SetFloat("DamageCoeff", damageCoeff);
         Debug.Log("Hello " + name);
         if (!startState)
+        {
             animator.SetInteger("Button", 0);
+        }
         animator.SetBool("Animating", true);
         animator.SetBool("stopActions", false);
         startTime = Time.timeSinceLevelLoad;

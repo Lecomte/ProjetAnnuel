@@ -8,7 +8,8 @@ public class SpawnManager : MonoBehaviour {
 	public UnitManager unitManager;
 
 
-	public Dictionary<int, List<Collider> >			UnusedUnits;
+	private Dictionary<int, List<Collider> >			UnusedUnits;
+	private List <Collider> 							ActiveUnits;
 
 	// Use this for initialization
 	void Start () 
@@ -21,8 +22,13 @@ public class SpawnManager : MonoBehaviour {
 	
 	}
 
+	public List <Collider> GetActiveUnits() {
+		return ActiveUnits;
+	}
+
 	public void CreateUnusedUnitsDictionary()
 	{
+		ActiveUnits = new List<Collider> ();
 		this.UnusedUnits = new Dictionary<int, List<Collider> > ();
 		
 		foreach (ColliderEntityClass collider_entity_class in unitManager.colliderEntityList) 
@@ -58,6 +64,7 @@ public class SpawnManager : MonoBehaviour {
 	public void OnUnitDeath(Collider unitCollider)
 	{
 		AddUnusedUnit (unitCollider);
+		ActiveUnits.Remove (unitCollider);
 	}
 
 	public Collider PullUnit(int type)
@@ -69,6 +76,7 @@ public class SpawnManager : MonoBehaviour {
 
 			Collider first = UnusedUnits[type][0];
 			UnusedUnits[type].RemoveAt(0);
+			ActiveUnits.Add(first);
 			return first;
 		}
 		

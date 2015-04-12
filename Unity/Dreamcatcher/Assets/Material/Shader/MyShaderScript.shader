@@ -33,6 +33,7 @@
 
             #pragma vertex vert
             #pragma fragment frag
+
             #include "UnityCG.cginc"
             
             uniform float _Intensity0;
@@ -130,7 +131,6 @@
             	rgb.R = r;
             	rgb.G = g;
             	rgb.B = b;
-				rgb.a = 0.5f;
             	return rgb;
       		}      
 
@@ -235,7 +235,9 @@
             				i.oldPosition.y + ycenter  >= -_ColumnHeight / 2)
             		col = HSL2RGB(intensity, 0.8, 0.5);
             	
-                return fixed4(col.R,col.G,col.B,1 - abs(_ColumnHeight / 2 + ycenter + i.oldPosition.y) / _ColumnHeight/2);
+				fixed4 val = fixed4(col.R,col.G,col.B,1 - abs(_ColumnHeight / 2 + ycenter + i.oldPosition.y) / _ColumnHeight/2);
+				val.a = 0.33;
+                return val;
             }
 
             ENDCG

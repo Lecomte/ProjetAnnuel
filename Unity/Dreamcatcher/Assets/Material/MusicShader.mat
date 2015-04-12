@@ -18,81 +18,81 @@ Material:
       data:
         first:
           name: _Intensity0
-        second: .273084044
+        second: .192900717
       data:
         first:
           name: _Intensity1
-        second: .246345744
+        second: .177076891
       data:
         first:
           name: _Intensity2
-        second: .210086167
+        second: .164983407
       data:
         first:
           name: _Intensity3
-        second: .28995508
+        second: .182799488
       data:
         first:
           name: _Intensity4
-        second: .358369619
+        second: .152491346
       data:
         first:
           name: _Intensity5
-        second: .309497207
+        second: .152492076
       data:
         first:
           name: _Intensity6
-        second: .307269037
+        second: .149120852
       data:
         first:
           name: _Intensity7
-        second: .280862749
+        second: .165009171
       data:
         first:
           name: _Intensity8
-        second: .265866816
+        second: .149587512
       data:
         first:
           name: _Intensity9
-        second: .255233586
+        second: .163064823
       data:
         first:
           name: _Intensity10
-        second: .280996382
+        second: .135985121
       data:
         first:
           name: _Intensity11
-        second: .256533831
+        second: .576146007
       data:
         first:
           name: _Intensity12
-        second: .240236193
+        second: .274406493
       data:
         first:
           name: _Intensity13
-        second: .230047792
+        second: .238828078
       data:
         first:
           name: _Intensity14
-        second: .200578928
+        second: .205413416
       data:
         first:
           name: _Intensity15
-        second: .308196932
+        second: .197505116
       data:
         first:
           name: _ColumnWidth
-        second: 2
-      data:
-        first:
-          name: _ColumnHeight
-        second: 20
-      data:
-        first:
-          name: _HeightDisplacementFactor
         second: 5
       data:
         first:
+          name: _ColumnHeight
+        second: 40
+      data:
+        first:
+          name: _HeightDisplacementFactor
+        second: -2
+      data:
+        first:
           name: _OffSetX
-        second: 0
+        second: 50
     m_Colors: {}

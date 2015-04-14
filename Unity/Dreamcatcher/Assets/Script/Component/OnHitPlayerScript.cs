@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class OnCollisionWithObjectFireEventScript : MonoBehaviour {
+public class OnHitPlayerScript : MonoBehaviour {
 
     [SerializeField]
     private byte _layer;
 
     [SerializeField]
-    private EntityStatisticScript _entityStat;
+    private UnitManager unitManager;
 
     [SerializeField]
-    private ColliderEvent eventToFire;
+    private DamageEvent eventToFire;
+
+
 
     void Start()
     {
@@ -22,6 +24,6 @@ public class OnCollisionWithObjectFireEventScript : MonoBehaviour {
     {
         if (collision.gameObject.layer == _layer)
             if (eventToFire != null)
-                eventToFire.Invoke(collision.collider);
+                eventToFire.Invoke(unitManager.getEntityStatisticScript(collision.collider).Damage);
     }
 }

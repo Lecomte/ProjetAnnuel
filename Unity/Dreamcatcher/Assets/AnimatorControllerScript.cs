@@ -13,7 +13,6 @@ public class AnimatorControllerScript : StateMachineBehaviour {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetFloat("DamageCoeff", damageCoeff);
-        Debug.Log("Hello " + name +" - "+ Time.timeSinceLevelLoad );
         if (!startState)
         {
             animator.SetInteger("Button", 0);
@@ -52,7 +51,6 @@ public class AnimatorControllerScript : StateMachineBehaviour {
             if (Time.timeSinceLevelLoad - startTime > 4.0f)
             {
                 animator.SetBool("Animating", false);
-                Debug.Log("Hello Exit " + Time.timeSinceLevelLoad);
             }
         }
 	}

@@ -282,7 +282,7 @@ GameObject:
   - 114: {fileID: 52467271}
   - 54: {fileID: 52467270}
   - 195: {fileID: 52467269}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &52467271
 MonoBehaviour:
@@ -1007,9 +1007,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 286596607}
   - 65: {fileID: 286596606}
-  - 114: {fileID: 286596605}
   - 33: {fileID: 286596609}
   - 23: {fileID: 286596608}
+  - 114: {fileID: 286596610}
+  - 54: {fileID: 286596605}
   m_Layer: 11
   m_Name: Hand_2
   m_TagString: Untagged
@@ -1017,25 +1018,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &286596605
-MonoBehaviour:
+--- !u!54 &286596605
+Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 286596604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8683ad233295826468f06e57f43644fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _layer: 0
-  animator: {fileID: 0}
-  stats: {fileID: 0}
-  unitManager: {fileID: 0}
-  eventToFire:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: HitMobEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!65 &286596606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1091,6 +1088,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 286596604}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &286596610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286596604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8683ad233295826468f06e57f43644fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer: 9
+  animator: {fileID: 1485800683}
+  stats: {fileID: 1485800674}
+  unitManager: {fileID: 515302937}
+  eventToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 515302937}
+        m_MethodName: infligeDamageToCollider
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: HitMobEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &297594544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,7 +1670,7 @@ GameObject:
   - 114: {fileID: 467936039}
   - 54: {fileID: 467936038}
   - 195: {fileID: 467936037}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1694,7 +1722,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &467936039
 MonoBehaviour:
@@ -1784,7 +1812,7 @@ GameObject:
   - 114: {fileID: 477178980}
   - 54: {fileID: 477178979}
   - 195: {fileID: 477178978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1864,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &477178980
 MonoBehaviour:
@@ -1986,7 +2014,7 @@ GameObject:
   - 114: {fileID: 504700427}
   - 54: {fileID: 504700426}
   - 195: {fileID: 504700425}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2066,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &504700427
 MonoBehaviour:
@@ -2482,7 +2510,7 @@ GameObject:
   - 114: {fileID: 609406105}
   - 54: {fileID: 609406104}
   - 195: {fileID: 609406103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2534,7 +2562,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &609406105
 MonoBehaviour:
@@ -2684,7 +2712,7 @@ GameObject:
   - 114: {fileID: 634271159}
   - 54: {fileID: 634271158}
   - 195: {fileID: 634271157}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2724,7 +2752,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &634271159
 MonoBehaviour:
@@ -2822,6 +2850,8 @@ GameObject:
   - 65: {fileID: 655444546}
   - 33: {fileID: 655444548}
   - 23: {fileID: 655444547}
+  - 114: {fileID: 655444549}
+  - 54: {fileID: 655444550}
   m_Layer: 11
   m_Name: Hand_1
   m_TagString: Untagged
@@ -2884,6 +2914,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 655444544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &655444549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655444544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8683ad233295826468f06e57f43644fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer: 9
+  animator: {fileID: 1485800683}
+  stats: {fileID: 1485800674}
+  unitManager: {fileID: 515302937}
+  eventToFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 515302937}
+        m_MethodName: infligeDamageToCollider
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: HitMobEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!54 &655444550
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655444544}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &707449038
 Prefab:
   m_ObjectHideFlags: 0
@@ -3347,7 +3423,7 @@ GameObject:
   - 114: {fileID: 807107637}
   - 54: {fileID: 807107636}
   - 195: {fileID: 807107635}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3399,7 +3475,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &807107637
 MonoBehaviour:
@@ -3523,7 +3599,7 @@ GameObject:
   - 114: {fileID: 827712759}
   - 54: {fileID: 827712758}
   - 195: {fileID: 827712757}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3575,7 +3651,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &827712759
 MonoBehaviour:
@@ -3665,7 +3741,7 @@ GameObject:
   - 114: {fileID: 834189746}
   - 54: {fileID: 834189745}
   - 195: {fileID: 834189744}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3717,7 +3793,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &834189746
 MonoBehaviour:
@@ -3987,7 +4063,7 @@ GameObject:
   - 114: {fileID: 954166279}
   - 54: {fileID: 954166281}
   - 195: {fileID: 954166280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: exampleMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4061,7 +4137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954166273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9000001, y: 1, z: 2.68000007}
+  m_LocalPosition: {x: -.560000002, y: 1, z: 4.36999989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4249,7 +4325,7 @@ GameObject:
   - 114: {fileID: 1027849294}
   - 54: {fileID: 1027849293}
   - 195: {fileID: 1027849292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4301,7 +4377,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1027849294
 MonoBehaviour:
@@ -5314,7 +5390,7 @@ GameObject:
   - 114: {fileID: 1470130438}
   - 54: {fileID: 1470130437}
   - 195: {fileID: 1470130436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: exampleMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5366,7 +5442,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1470130438
 MonoBehaviour:
@@ -5479,7 +5555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   CurrentHealth: 90
-  Damage: 10
+  Damage: 100
   Resistance: 1
   EntityType: 0
 --- !u!23 &1485800675
@@ -6415,7 +6491,7 @@ GameObject:
   - 114: {fileID: 1709795641}
   - 54: {fileID: 1709795640}
   - 195: {fileID: 1709795639}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6467,7 +6543,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1709795641
 MonoBehaviour:
@@ -6750,7 +6826,7 @@ GameObject:
   - 114: {fileID: 1769229767}
   - 54: {fileID: 1769229766}
   - 195: {fileID: 1769229765}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6802,7 +6878,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1769229767
 MonoBehaviour:
@@ -7122,7 +7198,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1852537564}
-  - 114: {fileID: 1852537565}
   m_Layer: 11
   m_Name: Hands
   m_TagString: Untagged
@@ -7144,37 +7219,6 @@ Transform:
   - {fileID: 1466475590}
   m_Father: {fileID: 1485800678}
   m_RootOrder: 1
---- !u!114 &1852537565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1852537563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8683ad233295826468f06e57f43644fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _layer: 9
-  animator: {fileID: 1485800683}
-  stats: {fileID: 1485800674}
-  unitManager: {fileID: 515302937}
-  eventToFire:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 515302937}
-        m_MethodName: infligeDamageToCollider
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: HitMobEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1881886345
 Prefab:
   m_ObjectHideFlags: 0
@@ -7670,7 +7714,7 @@ GameObject:
   - 114: {fileID: 1998662212}
   - 54: {fileID: 1998662211}
   - 195: {fileID: 1998662210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Type1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7722,7 +7766,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &1998662212
 MonoBehaviour:

@@ -39,6 +39,7 @@ public class UnitManager : MonoBehaviour {
 
     public void infligeDamageToCollider(Collider collider, int damage)
     {
+        Debug.Log("infligeDamageToCollider");
         this.EntityDictionary[collider].TakeDamage(damage);
     }
 

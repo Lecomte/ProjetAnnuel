@@ -27,6 +27,7 @@ public class ShootBulletScript : MonoBehaviour {
             }
         }
         Vector3 direction = destination - transform.position;
-        manager.SpawnBullet(transform.position, destination.normalized, bulletDamageCoeff);
+        Debug.Log(direction);
+        manager.SpawnBullet(transform.position, direction.normalized, bulletDamageCoeff);
 	}
 }

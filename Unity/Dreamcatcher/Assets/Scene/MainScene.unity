@@ -796,7 +796,7 @@ Transform:
   m_Children:
   - {fileID: 344431960}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &204031657
 Prefab:
   m_ObjectHideFlags: 0
@@ -1244,7 +1244,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3c47ba1b9fc10ca40b115587eb6d4a22, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4f44206e726c2ea47a360deb38d73b6e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3262,12 +3262,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 769063985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -6.26000023}
+  m_LocalRotation: {x: .271088004, y: 0, z: 0, w: .962554574}
+  m_LocalPosition: {x: 0, y: 4, z: -3.75999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1485800678}
+  m_RootOrder: 0
 --- !u!1 &781861313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,7 +3507,7 @@ Transform:
   - {fileID: 297594546}
   - {fileID: 206940022}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &827712755
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,7 +4065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &954166279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4675,7 +4675,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1167168443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,6 +5458,7 @@ GameObject:
   - 114: {fileID: 1485800682}
   - 114: {fileID: 1485800680}
   - 65: {fileID: 1485800676}
+  - 114: {fileID: 1485800684}
   m_Layer: 8
   m_Name: examplePlayer
   m_TagString: Untagged
@@ -5534,6 +5535,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 769063990}
   - {fileID: 1852537564}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -5622,6 +5624,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1485800684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485800673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f3a6d1c8c57bb4a939f81365c13a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 769063990}
 --- !u!1001 &1534090457
 Prefab:
   m_ObjectHideFlags: 0
@@ -5785,7 +5799,7 @@ Transform:
   - {fileID: 148480210}
   - {fileID: 1881886346}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1001 &1559599021
 Prefab:
   m_ObjectHideFlags: 0
@@ -6600,7 +6614,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1001 &1722423898
 Prefab:
   m_ObjectHideFlags: 0
@@ -7129,7 +7143,7 @@ Transform:
   - {fileID: 1200421937}
   - {fileID: 1466475590}
   m_Father: {fileID: 1485800678}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1852537565
 MonoBehaviour:
   m_ObjectHideFlags: 0

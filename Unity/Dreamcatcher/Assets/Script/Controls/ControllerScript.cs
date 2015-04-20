@@ -15,7 +15,7 @@ public class ControllerScript : MonoBehaviour {
         {
             direction.Normalize();
         }
-        transform.Translate(direction * Time.deltaTime * 100);
+        transform.Translate(direction * Time.deltaTime * 10);
     }
 
 

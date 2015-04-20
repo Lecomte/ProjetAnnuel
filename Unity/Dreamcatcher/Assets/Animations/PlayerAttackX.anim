@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: PlayerAttackYYY
+  m_Name: PlayerAttackX
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -18,47 +18,26 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: .25, y: .25, z: .5}
-        outSlope: {x: .25, y: .25, z: .5}
+        inSlope: {x: .5, y: 0, z: 0}
+        outSlope: {x: .5, y: 0, z: 0}
         tangentMode: 0
       - time: 2
-        value: {x: .5, y: .5, z: 1}
+        value: {x: 1, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - time: 4
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: -.25, y: -.25, z: -.5}
-        outSlope: {x: -.25, y: -.25, z: -.5}
+        inSlope: {x: -.5, y: 0, z: 0}
+        outSlope: {x: -.5, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Hands/Hands_1_Handler/Hand_1
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: {x: 0, y: 0, z: 0}
-        inSlope: {x: -.25, y: .25, z: .5}
-        outSlope: {x: -.25, y: .25, z: .5}
-        tangentMode: 0
-      - time: 2
-        value: {x: -.5, y: .5, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - time: 4
-        value: {x: 0, y: 0, z: 0}
-        inSlope: {x: .25, y: -.25, z: -.5}
-        outSlope: {x: .25, y: -.25, z: -.5}
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    path: Hands/Hands_2_Handler/Hand_2
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
-  m_SampleRate: 10
+  m_SampleRate: 15
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -66,12 +45,6 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - path: 4001435623
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 1581312687
       attribute: 1
       script: {fileID: 0}
       classID: 4
@@ -85,7 +58,7 @@ AnimationClip:
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -101,54 +74,6 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: .25
-        outSlope: .25
-        tangentMode: 10
-      - time: 2
-        value: .5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 4
-        value: 0
-        inSlope: -.25
-        outSlope: -.25
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.x
-    path: Hands/Hands_1_Handler/Hand_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: .25
-        outSlope: .25
-        tangentMode: 10
-      - time: 2
-        value: .5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 4
-        value: 0
-        inSlope: -.25
-        outSlope: -.25
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.y
-    path: Hands/Hands_1_Handler/Hand_1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
         inSlope: .5
         outSlope: .5
         tangentMode: 10
@@ -164,7 +89,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.z
+    attribute: m_LocalPosition.x
     path: Hands/Hands_1_Handler/Hand_1
     classID: 4
     script: {fileID: 0}
@@ -173,47 +98,23 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: -.25
-        outSlope: -.25
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 2
-        value: -.5
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 4
         value: 0
-        inSlope: .25
-        outSlope: .25
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    attribute: m_LocalPosition.x
-    path: Hands/Hands_2_Handler/Hand_2
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: .25
-        outSlope: .25
-        tangentMode: 10
-      - time: 2
-        value: .5
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
-      - time: 4
-        value: 0
-        inSlope: -.25
-        outSlope: -.25
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalPosition.y
-    path: Hands/Hands_2_Handler/Hand_2
+    path: Hands/Hands_1_Handler/Hand_1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -221,23 +122,23 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: .5
-        outSlope: .5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       - time: 2
-        value: 1
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 10
       - time: 4
         value: 0
-        inSlope: -.5
-        outSlope: -.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     attribute: m_LocalPosition.z
-    path: Hands/Hands_2_Handler/Hand_2
+    path: Hands/Hands_1_Handler/Hand_1
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

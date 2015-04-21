@@ -8,6 +8,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
     private float startTime;
     public string name;
     public float damageCoeff;
+    public float animTime = 4.0f;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -30,7 +31,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
             needToStopActions = false;
             animator.SetBool("stopActions", true);
         }
-        else if (Time.timeSinceLevelLoad - startTime > 1.0f)
+        else if (Time.timeSinceLevelLoad - startTime > animTime/2)
         {
             if (Input.GetButtonDown("A_1"))
             {
@@ -48,7 +49,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
             {
                 animator.SetInteger("Button", 4);
             }
-            if (Time.timeSinceLevelLoad - startTime > 4.0f)
+            if (Time.timeSinceLevelLoad - startTime > animTime)
             {
                 animator.SetBool("Animating", false);
             }

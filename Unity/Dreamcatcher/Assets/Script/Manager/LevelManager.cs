@@ -71,9 +71,9 @@ public class LevelManager : MonoBehaviour
 		}
 	}
 
-    public void InitStats(EntityStatisticScript script) // TODO Replace by MobStatisticScript
+    public void InitStats(MobStatisticScript script)
 	{
-        // TODO Resistance SetDamage SetCurrentHealth SetMaxHealth SetResistance ( in MobStatisticScript ONLY !!)
+        // TODO Resistance SetDamage SetCurrentHealth SetMaxHealth SetResistance
 		float levelIntensity = GetIntensity ();
         script.SetDamage((int)(levelIntensity * 4f * StatVariation()));
         script.SetCurrentHealth((int)(levelIntensity * 20f * StatVariation()));

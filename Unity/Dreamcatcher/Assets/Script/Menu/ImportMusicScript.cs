@@ -5,23 +5,17 @@ using UnityEngine.UI;
 
 public class ImportMusicScript : MonoBehaviour {
 
-    public GameObject DirectoryPanel;
-    public RectTransform DirectoryPanelRecTransform;
-    public GameObject FilePanel;
-    public RectTransform FilePanelRecTransform;
-    public GameObject FolderRowPrefab;
-    public GameObject FileRowPrefab;
+    public FolderRowClass[] FolderRowList;
+    public FileRowClass[] FileRowList;
+
+    [SerializeField]
+    private Text indexPagesText;
+
+    [SerializeField]
+    private int _pageNumber=1;
 
     private string _folderSource;
-
-    private float _directoryPanelHeight;
-    private float _filePanelHeight;
-
-    private int _currentDirectoryPanelY;
-    private int _currentFilePanelY;
-
-    private GameObject[] _directoryRowInstance;
-    private GameObject[] _fileRowInstance;
+    private string[] directory;
 
     void Start()
     {
@@ -32,43 +26,80 @@ public class ImportMusicScript : MonoBehaviour {
     {
         this._folderSource = Application.streamingAssetsPath;
         //
-        this._directoryPanelHeight = DirectoryPanelRecTransform.sizeDelta.y;
-        this._filePanelHeight = FilePanelRecTransform.sizeDelta.y;
-        //
-        this._currentDirectoryPanelY = 0;
-        this._currentFilePanelY = 0;
-        //
-        loadAllRepository();
+        loadDirectory();
+        changeIndexPages();
+        loadDisplayedRepository();
     }
 
-    public void loadAllRepository()
+    private void changeIndexPages()
     {
-        string[] directory = Directory.GetDirectories(this._folderSource);
-        //
-        if (35 * directory.Length > DirectoryPanelRecTransform.sizeDelta.y)
+        indexPagesText.text = _pageNumber.ToString() + "/" + (Mathf.Ceil((float)directory.Length / (float)FolderRowList.Length)).ToString();
+    }
+
+    private void loadDirectory()
+    {
+        directory = Directory.GetDirectories(this._folderSource);
+    }
+
+    public void loadDisplayedRepository()
+    {
+        for (int i = 0; i < this.FolderRowList.Length; i++)
         {
-            DirectoryPanelRecTransform.sizeDelta += new Vector2(0, DirectoryPanelRecTransform.sizeDelta.y - (35 * directory.Length));
-            DirectoryPanelRecTransform.position -= new Vector3(0, DirectoryPanelRecTransform.sizeDelta.y / 2, 0);
-            //this._directoryPanelHeight = DirectoryPanelRecTransform.sizeDelta.y;
+            this.FolderRowList[i].inputField.text = "";
+            this.FolderRowList[i].visibleRowState(false);
         }
-        //
         string name = "";
-        for (int i = 0; i < directory.Length; i++)
+        int beginNumber = (_pageNumber - 1) * this.FolderRowList.Length;
+        int endNumber;
+        endNumber = _pageNumber * this.FolderRowList.Length < directory.Length ? 
+            _pageNumber * this.FolderRowList.Length :
+            directory.Length;
+        for (int i = beginNumber; i < endNumber; i++)
         {
             name = directory[i].Remove(0, this._folderSource.Length+1);
-            createDirectoryEntry(name);
+            this.FolderRowList[i - beginNumber].inputField.text = name;
+            this.FolderRowList[i - beginNumber].visibleRowState(true);
         }
     }
 
-    private void createDirectoryEntry(string name)
+    public void incrementPagesNumber()
     {
-        _currentDirectoryPanelY -= 35;
-        //
-        Vector3 pos = new Vector3(210,_directoryPanelHeight + _currentDirectoryPanelY,DirectoryPanel.transform.position.z);
-        //
-        GameObject row = (GameObject)Instantiate(FolderRowPrefab);
-        row.GetComponentInChildren<InputField>().text = name;
-        row.transform.SetParent(DirectoryPanel.transform);
-        row.transform.position = pos;
+        if ((_pageNumber * this.FolderRowList.Length) > directory.Length)
+            return;
+        this._pageNumber++;
+        changeIndexPages();
+        loadDisplayedRepository();
+    }
+
+    public void decrementPagesNumber()
+    {
+        if (_pageNumber > 1)
+        {
+            this._pageNumber--;
+            changeIndexPages();
+            loadDisplayedRepository();
+        }
+    }
+
+    public void loadRepoContent(string repoName)
+    {
+        string[] filesNames = Directory.GetFiles(this._folderSource + "\\" + repoName);
+        for (int i = 0; i < this.filesNames.Length; i++)
+        {
+            this.filesNames[i].inputField.text = "";
+            this.filesNames[i].visibleRowState(false);
+        }
+        string name = "";
+        int beginNumber = (_pageNumber - 1) * this.FolderRowList.Length;
+        int endNumber;
+        endNumber = _pageNumber * this.FolderRowList.Length < directory.Length ?
+            _pageNumber * this.FolderRowList.Length :
+            directory.Length;
+        for (int i = beginNumber; i < endNumber; i++)
+        {
+            name = directory[i].Remove(0, this._folderSource.Length + 1);
+            this.FolderRowList[i - beginNumber].inputField.text = name;
+            this.FolderRowList[i - beginNumber].visibleRowState(true);
+        }
     }
 }

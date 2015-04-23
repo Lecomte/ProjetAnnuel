@@ -24,6 +24,6 @@ public class OnHitPlayerScript : MonoBehaviour {
     {
         if (collision.gameObject.layer == _layer)
             if (eventToFire != null)
-                eventToFire.Invoke(unitManager.getEntityStatisticScript(collision.collider).Damage);
+                eventToFire.Invoke(unitManager.getEntityStatisticScript(collision.collider).getDamage());
     }
 }

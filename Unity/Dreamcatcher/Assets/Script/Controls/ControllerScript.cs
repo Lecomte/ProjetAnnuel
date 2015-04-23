@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class ControllerScript : MonoBehaviour {
-    
+
+    [SerializeField]
+    private float playerSpeed = 10f;
 	// Use this for initialization
 	void Start () {
 	}
@@ -15,7 +17,7 @@ public class ControllerScript : MonoBehaviour {
         {
             direction.Normalize();
         }
-        transform.Translate(direction * Time.deltaTime * 10);
+        transform.Translate(direction * Time.deltaTime * playerSpeed);
     }
 
 

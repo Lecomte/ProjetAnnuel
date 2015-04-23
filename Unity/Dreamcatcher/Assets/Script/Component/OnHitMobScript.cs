@@ -24,9 +24,15 @@ public class OnHitMobScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision " + collision.gameObject.layer + " == " + _layer + " - Damage : " + (int)animator.GetFloat("DamageCoeff") * stats.Damage);
+        Debug.Log("Collision " + collision.gameObject.layer + " == " + _layer + " - Damage : " + (int)animator.GetFloat("DamageCoeff") * stats.getDamage());
         if (collision.gameObject.layer == _layer)
+        {
             if (eventToFire != null)
-                eventToFire.Invoke(collision.collider, (int) animator.GetFloat("DamageCoeff") * stats.Damage);
+            {
+                eventToFire.Invoke(collision.collider, (int)animator.GetFloat("DamageCoeff") * stats.getDamage());
+                if (animator.GetInteger("ActionPoints")<10)
+                    animator.SetInteger("ActionPoints", animator.GetInteger("ActionPoints")+1);
+            }
+        }
     }
 }

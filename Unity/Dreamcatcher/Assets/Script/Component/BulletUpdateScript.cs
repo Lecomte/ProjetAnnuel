@@ -5,6 +5,8 @@ public class BulletUpdateScript : MonoBehaviour {
 
     [SerializeField]
     private UnitManager unitManager;
+    [SerializeField]
+    private float bulletSpeed = 100f;
 
     private Vector3 startPos;
     private Vector3 direction;
@@ -18,10 +20,7 @@ public class BulletUpdateScript : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
-        if (direction != null)
-        {
-            transform.Translate(direction);
-        }
+        transform.Translate(direction * Time.deltaTime * bulletSpeed);
 	}
 
     void OnCollisionEnter(Collision collision)

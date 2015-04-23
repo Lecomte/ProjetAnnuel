@@ -14,7 +14,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetFloat("DamageCoeff", damageCoeff);
-        if (!startState)
+        if (!startState || (animator.GetInteger("Button") == 1 && animator.GetInteger("ActionPoints") == 0))
         {
             animator.SetInteger("Button", 0);
         }

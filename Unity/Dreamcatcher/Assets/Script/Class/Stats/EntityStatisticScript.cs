@@ -2,19 +2,16 @@
 using System;
 using System.Collections;
 
-public class EntityStatisticScript : MonoBehaviour {
+public abstract class EntityStatisticScript : MonoBehaviour {
 
-    public int MaxHealth;
-    public int CurrentHealth;
-    public int Damage;
-    public int Resistance;
-	[SerializeField]
-	public int EntityType;
+    [SerializeField]
+    protected int MaxHealth;
+    [SerializeField]
+    protected int CurrentHealth;
+    [SerializeField]
+    protected int Damage;
 
-    public void TakeDamage(int damage)
-    {
-		this.CurrentHealth -= Math.Max(0, damage - this.Resistance);
-    }
+    public abstract void TakeDamage(int damage);
 
     public void TemporaryIncreaseDamage(int value, int secondes)
     {
@@ -40,5 +37,10 @@ public class EntityStatisticScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(secondes);
         function(value);
+    }
+
+    public int getDamage()
+    {
+        return Damage;
     }
 }

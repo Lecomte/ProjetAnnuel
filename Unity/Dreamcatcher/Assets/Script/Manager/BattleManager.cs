@@ -35,7 +35,7 @@ public class BattleManager : MonoBehaviour {
     {
         int damage = -1;
         EntityStatisticScript entityScript = unitManager.EntityDictionary[collider];
-        if (entityScript != null) { damage = entityScript.Damage; }
+        if (entityScript != null) { damage = entityScript.getDamage(); }
         if (this.TakeDamage != null && damage != -1)
             TakeDamage.Invoke(damage);
     }

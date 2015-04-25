@@ -7,13 +7,13 @@ public class ShootBulletScript : MonoBehaviour {
     [SerializeField]
     private BulletManager manager;
     [SerializeField]
-    private SpawnManager spawnManager;
+	private UnitManager unitManager;
 
 	// Use this for initialization
     public void Shoot(float bulletDamageCoeff) 
     {
         bool found = false;
-        List<Collider> units =  spawnManager.GetActiveUnits();
+		List<Collider> units =  unitManager.GetActiveUnits();
         float minDist = float.MaxValue;
         float dist = 0f;
         float angle = 0f;

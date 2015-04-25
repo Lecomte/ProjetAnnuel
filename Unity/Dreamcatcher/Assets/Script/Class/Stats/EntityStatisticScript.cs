@@ -11,6 +11,12 @@ public abstract class EntityStatisticScript : MonoBehaviour {
     [SerializeField]
     protected int Damage;
 
+	[SerializeField]
+	protected int EntityType; // à garder pour identifier lors du pulling
+
+	[SerializeField]
+	protected UnitManager unitManager; // Lorsque l'on prends des dégats et qu'on meurt, il faut prévenir de la mort de l'unité
+
     public abstract void TakeDamage(int damage);
 
     public void TemporaryIncreaseDamage(int value, int secondes)
@@ -43,4 +49,14 @@ public abstract class EntityStatisticScript : MonoBehaviour {
     {
         return Damage;
     }
+
+	public int getCurrentHealth()
+	{
+		return CurrentHealth;
+	}
+
+	public int getEntityType()
+	{
+		return EntityType;
+	}
 }

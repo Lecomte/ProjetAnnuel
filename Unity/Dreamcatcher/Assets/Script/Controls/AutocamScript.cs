@@ -12,7 +12,7 @@ public class AutocamScript : MonoBehaviour {
     };
 
     [SerializeField]
-    private SpawnManager spawnManager;
+	private UnitManager unitManager;
     [SerializeField]
     private Transform camera;
     [SerializeField]
@@ -72,7 +72,7 @@ public class AutocamScript : MonoBehaviour {
 
     private void getNearestUnitAsDest()
     {
-        units = spawnManager.GetActiveUnits();
+        units = unitManager.GetActiveUnits();
         float minDist = float.MaxValue;
         float dist = 0f;
         float angle = 0f;
@@ -98,7 +98,7 @@ public class AutocamScript : MonoBehaviour {
 
     public void getNextEntity(bool right)
     {
-        units = spawnManager.GetActiveUnits();
+		units = unitManager.GetActiveUnits();
         float minAngle = float.MaxValue;
         float angleCurrentTarget = 0f;
         Collider destination = null;
@@ -119,7 +119,7 @@ public class AutocamScript : MonoBehaviour {
 
     public void onUnitsListChange()
     {
-        units = spawnManager.GetActiveUnits();
+		units = unitManager.GetActiveUnits();
         if(!units.Contains(destCollider))
         {
             getNearestUnitAsDest();

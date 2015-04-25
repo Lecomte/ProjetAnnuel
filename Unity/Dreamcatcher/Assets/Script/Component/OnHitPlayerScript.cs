@@ -9,9 +9,12 @@ public class OnHitPlayerScript : MonoBehaviour {
     [SerializeField]
     private UnitManager unitManager;
 
-    [SerializeField]
-    private DamageEvent eventToFire;
+	
+	[SerializeField]
+	private MobStatisticScript attacker_script;
 
+    [SerializeField]
+	private HitMobEvent eventToFire;
 
 
     void Start()
@@ -20,10 +23,15 @@ public class OnHitPlayerScript : MonoBehaviour {
             Debug.Log("Aucun event renseigné.");
     }
 
-    void OnCollisionEnter(Collision collision)
+	void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == _layer)
-            if (eventToFire != null)
-                eventToFire.Invoke(unitManager.getEntityStatisticScript(collision.collider).getDamage());
+		if (!attacker_script.isAttacking) // l'attaquant n'attaque pas, pas de degats
+			return;
+		Collider collider = collision.collider;
+		if (collider.gameObject.layer == _layer)
+		if (eventToFire != null) {
+			Debug.Log("player being hurt " + collider.name + " by " + name);
+			eventToFire.Invoke (collider, attacker_script.getDamage() );
+		}
     }
 }

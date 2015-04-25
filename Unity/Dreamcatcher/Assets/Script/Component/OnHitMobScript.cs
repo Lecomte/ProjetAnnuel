@@ -9,7 +9,7 @@ public class OnHitMobScript : MonoBehaviour
     [SerializeField]
     private Animator animator;
     [SerializeField]
-    private EntityStatisticScript stats;
+    private EntityStatisticScript stats; // les stats du joueur pour pouvoir enlever les degats
     [SerializeField]
     private UnitManager unitManager;
     [SerializeField]
@@ -24,11 +24,13 @@ public class OnHitMobScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collision " + collision.gameObject.layer + " == " + _layer + " - Damage : " + (int)animator.GetFloat("DamageCoeff") * stats.getDamage());
-        if (collision.gameObject.layer == _layer)
+         if (collision.gameObject.layer == _layer)
         {
+
             if (eventToFire != null)
             {
+				Debug.Log("Collision fire " + collision.gameObject.layer + " == " + _layer + " - Damage : " + (int)animator.GetFloat("DamageCoeff") * stats.getDamage());
+
                 eventToFire.Invoke(collision.collider, (int)animator.GetFloat("DamageCoeff") * stats.getDamage());
                 if (animator.GetInteger("ActionPoints")<10)
                     animator.SetInteger("ActionPoints", animator.GetInteger("ActionPoints")+1);

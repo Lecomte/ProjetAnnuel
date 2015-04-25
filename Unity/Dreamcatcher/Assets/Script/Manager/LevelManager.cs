@@ -16,9 +16,6 @@ public class LevelManager : MonoBehaviour
 	[SerializeField]
 	public BattleManager battleManager;
 
-	[SerializeField] 
-	public SpawnManager spawnManager;
-
 	[SerializeField]
 	public UnitManager unitManager;
 
@@ -56,14 +53,14 @@ public class LevelManager : MonoBehaviour
 			}
 
 			Collider collider = null; 
-			collider = spawnManager.PullUnit (1);
+			collider = unitManager.PullUnit (1);
 			while (collider == null)
 			{
 				yield return new WaitForSeconds(0.2f);			
-				collider =  spawnManager.PullUnit (1);
+				collider =  unitManager.PullUnit (1);
 			}
 
-			InitStats (unitManager.EntityDictionary [collider]);
+			InitStats ( (MobStatisticScript) unitManager.EntityDictionary [collider]);
 			collider.gameObject.SetActive (true);
 			collider.gameObject.transform.position = new Vector3 (Random.Range (dancefloor_origin.x, dancefloor_origin.x + dancefloor_size.x), 0, Random.Range (dancefloor_origin.y, dancefloor_origin.z + dancefloor_size.z)); 
 			battleManager.fireEnemySpawnEvent (1);	
@@ -77,8 +74,8 @@ public class LevelManager : MonoBehaviour
 		float levelIntensity = GetIntensity ();
         script.SetDamage((int)(levelIntensity * 4f * StatVariation()));
         script.SetCurrentHealth((int)(levelIntensity * 20f * StatVariation()));
-        script.SetMaxHealth((int)(levelIntensity * 20f * StatVariation()));
-		script.SetResistance((int) (levelIntensity * 2f  * StatVariation()));
+        script.SetMaxHealth( script.getCurrentHealth() );
+		script.SetResistance((int) (levelIntensity * 0.1f  * StatVariation()));
 	}
 	
 	private float StatVariation()

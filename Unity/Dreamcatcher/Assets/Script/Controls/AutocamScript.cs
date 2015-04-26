@@ -20,29 +20,45 @@ public class AutocamScript : MonoBehaviour {
     [SerializeField]
     private float manualCameraSpeed = 100f;
 
+    private Quaternion cameraBaseRotation;
+
     private CameraMode mode = CameraMode.CHOSEN;
     private Collider destCollider;
 
     private List<Collider> units;
     private bool changed = false;
+    private bool changedMode = false;
 	
+    void Start()
+    {
+        cameraBaseRotation = camera.rotation;
+    }
+
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetButton("RS_1"))
+        if (Input.GetButton("RS_1"))
         {
-            switch(mode)
+            if (!changedMode)
             {
-                /*case CameraMode.NEAR:
-                    mode = CameraMode.CHOSEN;
-                    break;*/
-                case CameraMode.CHOSEN:
-                    getNearestUnitAsDest();
-                    mode = CameraMode.MAN;
-                    break;
-                case CameraMode.MAN:
-                    mode = CameraMode.CHOSEN;
-                    break;
+                switch(mode)
+                {
+                    /*case CameraMode.NEAR:
+                        mode = CameraMode.CHOSEN;
+                        break;*/
+                    case CameraMode.CHOSEN:
+                        camera.rotation = cameraBaseRotation;
+                        mode = CameraMode.MAN;
+                        break;
+                    case CameraMode.MAN:
+                        getNearestUnitAsDest();
+                        mode = CameraMode.CHOSEN;
+                        break;
+                }
             }
+        }
+        else if (changedMode)
+        {
+            changedMode = false;
         }
 
         switch (mode)
@@ -119,17 +135,20 @@ public class AutocamScript : MonoBehaviour {
 
     public void onUnitsListChange()
     {
-		units = unitManager.GetActiveUnits();
-        if(!units.Contains(destCollider))
-        {
-            getNearestUnitAsDest();
+        if(mode != CameraMode.MAN)
+        { 
+		    units = unitManager.GetActiveUnits();
+            if(!units.Contains(destCollider))
+            {
+                getNearestUnitAsDest();
+            }
         }
     }
 
     private void manualCam()
     {
-        transform.Rotate(Vector3.up, -Input.GetAxis("R_XAxis_1") * Time.deltaTime * manualCameraSpeed);
-        camera.Rotate(Vector3.left, -Input.GetAxis("R_YAxis_1") * Time.deltaTime * manualCameraSpeed);
+        transform.Rotate(transform.up, -Input.GetAxis("R_XAxis_1") * Time.deltaTime * manualCameraSpeed);
+        camera.Rotate(transform.right, -Input.GetAxis("R_YAxis_1") * Time.deltaTime * manualCameraSpeed);
     }
 
     private void semiManualCam()

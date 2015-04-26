@@ -872,9 +872,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 7
     m_ConditionEvent: Button
-    m_EventTreshold: 0
+    m_EventTreshold: 3
   - m_ConditionMode: 2
     m_ConditionEvent: Animating
     m_EventTreshold: 0
@@ -1100,9 +1100,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Animating
     m_EventTreshold: 0
-  - m_ConditionMode: 3
+  - m_ConditionMode: 7
     m_ConditionEvent: Button
-    m_EventTreshold: 0
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110237112}
   m_Solo: 0

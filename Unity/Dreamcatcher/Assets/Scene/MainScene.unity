@@ -357,8 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8b57c725452ea4c86532ed3035607e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  my_renderer: {fileID: 40753327}
-  mob: {fileID: 52467272}
 --- !u!1001 &43596151
 Prefab:
   m_ObjectHideFlags: 0
@@ -1443,7 +1441,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4f44206e726c2ea47a360deb38d73b6e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b76971e7b953ce44e8b557994a60bbcf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2779,7 +2777,7 @@ GameObject:
   - 92: {fileID: 769063988}
   - 124: {fileID: 769063987}
   - 81: {fileID: 769063986}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2845,7 +2843,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 769063985}
-  m_LocalRotation: {x: .271088004, y: 0, z: 0, w: .962554574}
+  m_LocalRotation: {x: .258819073, y: 0, z: 0, w: .965925813}
   m_LocalPosition: {x: 0, y: 4, z: -3.75999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4411,7 +4409,7 @@ GameObject:
   - 114: {fileID: 1496546205}
   - 114: {fileID: 1496546206}
   - 114: {fileID: 1496546207}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

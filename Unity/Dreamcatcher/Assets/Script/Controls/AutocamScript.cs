@@ -147,8 +147,8 @@ public class AutocamScript : MonoBehaviour {
 
     private void manualCam()
     {
-        transform.Rotate(transform.up, -Input.GetAxis("R_XAxis_1") * Time.deltaTime * manualCameraSpeed);
-        camera.Rotate(transform.right, -Input.GetAxis("R_YAxis_1") * Time.deltaTime * manualCameraSpeed);
+        transform.Rotate(Vector3.up, Input.GetAxis("R_XAxis_1") * Time.deltaTime * manualCameraSpeed);
+        camera.Rotate(Vector3.right, -Input.GetAxis("R_YAxis_1") * Time.deltaTime * manualCameraSpeed);
     }
 
     private void semiManualCam()

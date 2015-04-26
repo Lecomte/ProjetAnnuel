@@ -44,7 +44,7 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 3068658021
+    - path: 4001435623
       attribute: 1
       script: {fileID: 0}
       classID: 4

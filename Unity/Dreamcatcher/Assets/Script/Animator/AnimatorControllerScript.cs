@@ -8,7 +8,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
     private float startTime;
     public string name;
     public float damageCoeff;
-    public float animTime = 4.0f;
+    public float animTime = 2.0f;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -16,6 +16,7 @@ public class ImportMusicScript : MonoBehaviour {
 
     private string _folderSource;
     private string[] directory;
+    private string[] filesNames;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class ImportMusicScript : MonoBehaviour {
         {
             this.FolderRowList[i].inputField.text = "";
             this.FolderRowList[i].visibleRowState(false);
+            this.FolderRowList[i].openClickEvent.RemoveAllListeners();
         }
         string name = "";
         int beginNumber = (_pageNumber - 1) * this.FolderRowList.Length;
@@ -59,6 +61,7 @@ public class ImportMusicScript : MonoBehaviour {
             name = directory[i].Remove(0, this._folderSource.Length+1);
             this.FolderRowList[i - beginNumber].inputField.text = name;
             this.FolderRowList[i - beginNumber].visibleRowState(true);
+            this.FolderRowList[i].openClickEvent.AddListener(loadRepoContent);
         }
     }
 
@@ -83,23 +86,24 @@ public class ImportMusicScript : MonoBehaviour {
 
     public void loadRepoContent(string repoName)
     {
-        string[] filesNames = Directory.GetFiles(this._folderSource + "\\" + repoName);
-        for (int i = 0; i < this.filesNames.Length; i++)
+        Debug.Log("Load Repo Content");
+        filesNames = Directory.GetFiles(this._folderSource + "\\" + repoName);
+        for (int i = 0; i < filesNames.Length; i++)
         {
-            this.filesNames[i].inputField.text = "";
-            this.filesNames[i].visibleRowState(false);
+            this.FileRowList[i].text.text = "";
+            this.FileRowList[i].visibleRowState(false);
         }
         string name = "";
-        int beginNumber = (_pageNumber - 1) * this.FolderRowList.Length;
+        int beginNumber = (_pageNumber - 1) * this.FileRowList.Length;
         int endNumber;
-        endNumber = _pageNumber * this.FolderRowList.Length < directory.Length ?
-            _pageNumber * this.FolderRowList.Length :
+        endNumber = _pageNumber * this.FileRowList.Length < directory.Length ?
+            _pageNumber * this.FileRowList.Length :
             directory.Length;
         for (int i = beginNumber; i < endNumber; i++)
         {
-            name = directory[i].Remove(0, this._folderSource.Length + 1);
-            this.FolderRowList[i - beginNumber].inputField.text = name;
-            this.FolderRowList[i - beginNumber].visibleRowState(true);
+            name = directory[i].Remove(0, this.FileRowList.Length + 1);
+            this.FileRowList[i - beginNumber].text.text = name;
+            this.FileRowList[i - beginNumber].visibleRowState(true);
         }
     }
 }

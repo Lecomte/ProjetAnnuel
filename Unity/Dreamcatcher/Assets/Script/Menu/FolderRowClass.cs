@@ -8,7 +8,7 @@ public class FolderRowClass : MonoBehaviour {
     public InputField inputField;
     public Button button;
 
-    public UnityEvent<string> openClickEvent;
+    public UnityEvent<string> openClickEvent = new UnityEvent<string>();
 
     public void visibleRowState(bool value)
     {

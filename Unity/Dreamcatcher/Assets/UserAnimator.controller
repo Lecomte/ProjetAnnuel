@@ -103,7 +103,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_B_B
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11407026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +119,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_Y_B
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11408234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_Y
   damageCoeff: 1.20000005
-  animTime: 2
+  animTime: 1
 --- !u!114 &11411682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +175,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_B
   damageCoeff: 1.20000005
-  animTime: 2
+  animTime: 1
 --- !u!114 &11425742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_B
   damageCoeff: 1.10000002
-  animTime: 2
+  animTime: 1
 --- !u!114 &11430164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,7 +207,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_Y_Y
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11431644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,7 +223,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_Y_Y
   damageCoeff: 1.39999998
-  animTime: 2
+  animTime: 1
 --- !u!114 &11431822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B
   damageCoeff: 1
-  animTime: 2
+  animTime: 1
 --- !u!114 &11435026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,7 +255,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: X
   damageCoeff: 1
-  animTime: 2
+  animTime: 1
 --- !u!114 &11440798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_X_X
   damageCoeff: 1
-  animTime: 2
+  animTime: 1
 --- !u!114 &11445754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_Y_B
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11457222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +315,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: X_X_X
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11465290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,7 +331,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_B_Y
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11471320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,7 +347,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_B_B
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11472186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +387,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_Y_B
   damageCoeff: 1.5
-  animTime: 2
+  animTime: 1
 --- !u!114 &11479516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,7 +403,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: X_X
   damageCoeff: 1.20000005
-  animTime: 2
+  animTime: 1
 --- !u!114 &11480902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,7 +419,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_X
   damageCoeff: 1
-  animTime: 2
+  animTime: 1
 --- !u!114 &11481950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -435,7 +435,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_B
   damageCoeff: 1.20000005
-  animTime: 2
+  animTime: 1
 --- !u!114 &11482266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,7 +467,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_B_Y
   damageCoeff: 1.5
-  animTime: 2
+  animTime: 1
 --- !u!114 &11484366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_B_Y
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11491838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,7 +515,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y
   damageCoeff: 1
-  animTime: 2
+  animTime: 1
 --- !u!114 &11492980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,7 +531,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_Y
   damageCoeff: 1.10000002
-  animTime: 2
+  animTime: 1
 --- !u!114 &11496188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,7 +547,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: Y_Y_Y
   damageCoeff: 1.29999995
-  animTime: 2
+  animTime: 1
 --- !u!114 &11497328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,7 +563,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: B_Y
   damageCoeff: 1.20000005
-  animTime: 2
+  animTime: 1
 --- !u!114 &11497958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -579,7 +579,7 @@ MonoBehaviour:
   needToStopActions: 0
   name: A_B_B
   damageCoeff: 1.39999998
-  animTime: 2
+  animTime: 1
 --- !u!1101 &110101910
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1472,9 +1472,6 @@ AnimatorStateTransition:
     m_EventTreshold: 2
   - m_ConditionMode: 7
     m_ConditionEvent: Button
-    m_EventTreshold: 3
-  - m_ConditionMode: 7
-    m_ConditionEvent: Button
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110237112}
@@ -1753,9 +1750,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 7
     m_ConditionEvent: Button
     m_EventTreshold: 2
-  - m_ConditionMode: 7
-    m_ConditionEvent: Button
-    m_EventTreshold: 3
   - m_ConditionMode: 7
     m_ConditionEvent: Button
     m_EventTreshold: 4

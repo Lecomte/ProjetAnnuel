@@ -7,6 +7,8 @@ public class OnHitMobScript : MonoBehaviour
     [SerializeField]
     private byte _layer;
     [SerializeField]
+    private byte _weaponLayer;
+    [SerializeField]
     private Animator animator;
     [SerializeField]
     private EntityStatisticScript stats; // les stats du joueur pour pouvoir enlever les degats
@@ -24,7 +26,7 @@ public class OnHitMobScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-         if (collision.gameObject.layer == _layer)
+        if (collision.gameObject.layer == _layer || collision.gameObject.layer == _weaponLayer)
         {
 
             if (eventToFire != null)

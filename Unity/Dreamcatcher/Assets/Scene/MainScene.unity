@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _layer: 8
+  _weaponLayer: 11
   unitManager: {fileID: 515302937}
   attacker_script: {fileID: 52467272}
   eventToFire:
@@ -1270,6 +1271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _layer: 9
+  _weaponLayer: 10
   animator: {fileID: 1485800683}
   stats: {fileID: 1485800674}
   unitManager: {fileID: 515302937}
@@ -2431,6 +2433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _layer: 9
+  _weaponLayer: 10
   animator: {fileID: 1485800683}
   stats: {fileID: 1485800674}
   unitManager: {fileID: 515302937}

@@ -39,7 +39,7 @@ public abstract class EntityStatisticScript : MonoBehaviour {
         }
     }
 
-    private IEnumerator executeAfterTime(Action<int> function, int secondes, int value)
+    protected IEnumerator executeAfterTime(Action<int> function, float secondes, int value)
     {
         yield return new WaitForSeconds(secondes);
         function(value);

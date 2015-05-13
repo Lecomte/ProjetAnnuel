@@ -28,7 +28,7 @@ public class MobStatisticScript : EntityStatisticScript
 
 	public void TemporaryIncreaseResistance(int value, float secondes)
 	{
-		this.IncreaseDamage(value);
+		this.IncreaseResistance(value);
 		StartCoroutine(executeAfterTime(DecreaseResistance, secondes, value));
 	}
 	

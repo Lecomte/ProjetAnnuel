@@ -7,7 +7,7 @@ public class IABasicAttack : IABehaviour
 	public Animator weaponAnimator;
 
 	[SerializeField]
-	MobStatisticScript stats;
+	protected MobStatisticScript stats;
 
 	public Collider target;
 

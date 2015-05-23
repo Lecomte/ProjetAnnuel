@@ -38,6 +38,7 @@ public class IAScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine ("IA");
+		stats.isAttacking = stats.isDefending = false;
 	}
 	
 	void Reset() {
@@ -97,6 +98,11 @@ public class IAScript : MonoBehaviour {
 
 		}
 		
+	}
+	void OnEnable () {
+		Reset ();
+		StopCoroutine ("IA");
+		StartCoroutine ("IA");	
 	}
 
 	// Update is called once per frame

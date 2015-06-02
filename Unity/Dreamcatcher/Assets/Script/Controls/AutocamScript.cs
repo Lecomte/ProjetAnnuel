@@ -27,7 +27,6 @@ public class AutocamScript : MonoBehaviour {
 
     private List<Collider> units;
     private bool changed = false;
-    private bool changedMode = false;
 	
     void Start()
     {
@@ -36,10 +35,8 @@ public class AutocamScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButton("RS_1"))
+        if (Input.GetButtonDown("RS_1"))
         {
-            if (!changedMode)
-            {
                 switch(mode)
                 {
                     /*case CameraMode.NEAR:
@@ -54,13 +51,7 @@ public class AutocamScript : MonoBehaviour {
                         mode = CameraMode.CHOSEN;
                         break;
                 }
-            }
         }
-        else if (changedMode)
-        {
-            changedMode = false;
-        }
-
         switch (mode)
         {
             case CameraMode.NEAR:
@@ -86,7 +77,7 @@ public class AutocamScript : MonoBehaviour {
         }
     }
 
-    private void getNearestUnitAsDest()
+    public void getNearestUnitAsDest()
     {
         units = unitManager.GetActiveUnits();
         float minDist = float.MaxValue;
@@ -112,7 +103,7 @@ public class AutocamScript : MonoBehaviour {
         destCollider = destination;
     }
 
-    public void getNextEntity(bool right)
+    private void getNextEntity(bool right)
     {
 		units = unitManager.GetActiveUnits();
         float minAngle = float.MaxValue;
@@ -167,5 +158,15 @@ public class AutocamScript : MonoBehaviour {
         {
             changed = false;
         }
+    }
+
+    public Collider getDest()
+    {
+        return destCollider;
+    }
+
+    public bool isCamMan()
+    {
+        return mode == CameraMode.MAN;
     }
 }

@@ -4412,6 +4412,7 @@ GameObject:
   - 114: {fileID: 1496546205}
   - 114: {fileID: 1496546206}
   - 114: {fileID: 1496546207}
+  - 114: {fileID: 1496546208}
   m_Layer: 13
   m_Name: Player
   m_TagString: Untagged
@@ -4472,6 +4473,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 1485800676}
   script: {fileID: 1485800674}
+--- !u!114 &1496546208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496546203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28aefa3a8a74a5a4b94a75ef9aadc54f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camScript: {fileID: 1496546206}
 --- !u!1001 &1534090457
 Prefab:
   m_ObjectHideFlags: 0

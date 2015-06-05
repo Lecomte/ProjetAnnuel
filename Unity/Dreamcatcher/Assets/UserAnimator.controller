@@ -52,19 +52,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
-    m_Name: Base Layer
-    m_StateMachine: {fileID: 110722364}
-    m_Mask: {fileID: 0}
-    m_Motions: []
-    m_Behaviours: []
-    m_BlendingMode: 1
-    m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
-    m_IKPass: 0
-    m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
-  - serializedVersion: 5
-    m_Name: New Layer
+    m_Name: Run
     m_StateMachine: {fileID: 110759894}
     m_Mask: {fileID: 0}
     m_Motions: []
@@ -74,7 +62,19 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - serializedVersion: 5
+    m_Name: Attacks
+    m_StateMachine: {fileID: 110722364}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 1
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 0}
   m_MultiThreadedStateMachine: 1
 --- !u!114 &11402356
 MonoBehaviour:
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B_B_B
   damageCoeff: 1.29999995
   animTime: 1
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y_Y_B
   damageCoeff: 1.29999995
   animTime: 1
@@ -133,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y_Y
   damageCoeff: 1.20000005
   animTime: 1
@@ -173,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B_B
   damageCoeff: 1.20000005
   animTime: 1
@@ -189,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_B
   damageCoeff: 1.10000002
   animTime: 1
@@ -205,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B_Y_Y
   damageCoeff: 1.29999995
   animTime: 1
@@ -221,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_Y_Y
   damageCoeff: 1.39999998
   animTime: 1
@@ -237,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B
   damageCoeff: 1
   animTime: 1
@@ -253,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: X
   damageCoeff: 1
   animTime: 1
@@ -269,6 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_X_X
   damageCoeff: 1
   animTime: 1
@@ -285,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B_Y_B
   damageCoeff: 1.29999995
   animTime: 1
@@ -313,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: X_X_X
   damageCoeff: 1.29999995
   animTime: 1
@@ -329,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B_B_Y
   damageCoeff: 1.29999995
   animTime: 1
@@ -345,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y_B_B
   damageCoeff: 1.29999995
   animTime: 1
@@ -385,6 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_Y_B
   damageCoeff: 1.5
   animTime: 1
@@ -401,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: X_X
   damageCoeff: 1.20000005
   animTime: 1
@@ -417,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_X
   damageCoeff: 1
   animTime: 1
@@ -433,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y_B
   damageCoeff: 1.20000005
   animTime: 1
@@ -449,6 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 1
   needToStopActions: 0
+  needToWaitBeforeChange: 0
   name: Static
   damageCoeff: 0
   animTime: 4
@@ -465,6 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_B_Y
   damageCoeff: 1.5
   animTime: 1
@@ -481,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y_B_Y
   damageCoeff: 1.29999995
   animTime: 1
@@ -497,9 +518,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A
   damageCoeff: 0
-  animTime: .5
+  animTime: .100000001
 --- !u!114 &11492422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,6 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y
   damageCoeff: 1
   animTime: 1
@@ -529,6 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_Y
   damageCoeff: 1.10000002
   animTime: 1
@@ -545,6 +569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: Y_Y_Y
   damageCoeff: 1.29999995
   animTime: 1
@@ -561,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: B_Y
   damageCoeff: 1.20000005
   animTime: 1
@@ -577,6 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startState: 0
   needToStopActions: 0
+  needToWaitBeforeChange: 1
   name: A_B_B
   damageCoeff: 1.39999998
   animTime: 1
@@ -590,6 +617,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: ActionPoints
     m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: Button
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110231324}
   m_Solo: 0
@@ -2455,7 +2485,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400002, guid: 09953fd2cd87f134e9164842004f1492, type: 3}
   m_Tag: 
 --- !u!1102 &110272596
 AnimatorState:
@@ -2516,7 +2546,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: ce1f4d3da6d46de42ad2599a55a506c1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 09953fd2cd87f134e9164842004f1492, type: 3}
   m_Tag: Attack_Y
 --- !u!1102 &110280056
 AnimatorState:
@@ -2535,7 +2565,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 09953fd2cd87f134e9164842004f1492, type: 3}
   m_Tag: 
 --- !u!1102 &110281252
 AnimatorState:
@@ -2577,7 +2607,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: a8c69975fe2315441bee4687d448b269, type: 2}
+  m_Motion: {fileID: 7400002, guid: 09953fd2cd87f134e9164842004f1492, type: 3}
   m_Tag: Attack_B
 --- !u!1102 &110284534
 AnimatorState:
@@ -2682,7 +2712,7 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Animator
+  m_Name: Attacks
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110237112}
@@ -2785,11 +2815,11 @@ AnimatorStateMachine:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Animator
+  m_Name: Run
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110266570}
-    m_Position: {x: 284, y: 26, z: 0}
+    m_Position: {x: 288, y: 24, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110225134}
     m_Position: {x: 549, y: 28, z: 0}

@@ -5,6 +5,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
 
     public bool startState = false;
     public bool needToStopActions = false;
+    public bool needToWaitBeforeChange = true;
     private float startTime;
     public string name;
     public float damageCoeff;
@@ -31,14 +32,16 @@ public class AnimatorControllerScript : StateMachineBehaviour {
             needToStopActions = false;
             animator.SetBool("stopActions", true);
         }
-        else if (Time.timeSinceLevelLoad - startTime > animTime/2)
+        else if (!needToWaitBeforeChange || Time.timeSinceLevelLoad - startTime > animTime / 2)
         {
             if (Input.GetButtonDown("A_1"))
             {
                 animator.SetInteger("Button", 1);
+                Debug.Log("A");
             }
             if (Input.GetButtonDown("B_1"))
             {
+                Debug.Log("B");
                 animator.SetInteger("Button", 2);
             }
             if (Input.GetButtonDown("X_1"))
@@ -49,7 +52,7 @@ public class AnimatorControllerScript : StateMachineBehaviour {
             {
                 animator.SetInteger("Button", 4);
             }
-            if (Time.timeSinceLevelLoad - startTime > animTime)
+            if (!needToWaitBeforeChange || Time.timeSinceLevelLoad - startTime > animTime)
             {
                 animator.SetBool("Animating", false);
             }

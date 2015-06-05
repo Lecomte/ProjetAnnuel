@@ -19,6 +19,8 @@ public class DodgeScript : StateMachineBehaviour
         Vector3 direction = new Vector3(Input.GetAxis("L_XAxis_1"), 0, -Input.GetAxis("L_YAxis_1"));
         direction.Normalize();
         animator.gameObject.transform.parent.Translate(direction * Time.deltaTime * dodgeSpeed);
+        Debug.Log(animator.gameObject.transform.parent);
+        Debug.Log(direction * Time.deltaTime * dodgeSpeed);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -30,7 +30,7 @@ public class AutocamScript : MonoBehaviour {
 	
     void Start()
     {
-        cameraBaseRotation = camera.rotation;
+        cameraBaseRotation = camera.localRotation;
     }
 
 	// Update is called once per frame
@@ -43,10 +43,11 @@ public class AutocamScript : MonoBehaviour {
                         mode = CameraMode.CHOSEN;
                         break;*/
                     case CameraMode.CHOSEN:
-                        camera.rotation = cameraBaseRotation;
+                        camera.localRotation = cameraBaseRotation;
                         mode = CameraMode.MAN;
                         break;
                     case CameraMode.MAN:
+                        camera.localRotation = cameraBaseRotation;
                         getNearestUnitAsDest();
                         mode = CameraMode.CHOSEN;
                         break;
@@ -72,8 +73,8 @@ public class AutocamScript : MonoBehaviour {
     {
         if (destCollider)
         {
-            Quaternion targetRotationSocket = Quaternion.LookRotation(destCollider.transform.position - camera.position);
-            camera.rotation = Quaternion.Slerp(camera.rotation, targetRotationSocket, Time.deltaTime * autoCameraSpeed);
+            Quaternion targetRotationSocket = Quaternion.LookRotation(destCollider.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotationSocket, Time.deltaTime * autoCameraSpeed);
         }
     }
 
@@ -139,7 +140,7 @@ public class AutocamScript : MonoBehaviour {
     private void manualCam()
     {
         transform.Rotate(Vector3.up, Input.GetAxis("R_XAxis_1") * Time.deltaTime * manualCameraSpeed);
-        camera.Rotate(Vector3.right, -Input.GetAxis("R_YAxis_1") * Time.deltaTime * manualCameraSpeed);
+        camera.Rotate(Vector3.right, Input.GetAxis("R_YAxis_1") * Time.deltaTime * manualCameraSpeed);
     }
 
     private void semiManualCam()

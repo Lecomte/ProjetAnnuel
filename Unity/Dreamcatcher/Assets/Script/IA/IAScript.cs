@@ -63,7 +63,6 @@ public class IAScript : MonoBehaviour {
 
 				}
 			}
-
 			yield return new WaitForSeconds (1.5f);
 		}
 		

@@ -15,7 +15,7 @@ public class GrapnelScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         if (Input.GetButtonDown("LB_1"))
         {
@@ -34,15 +34,16 @@ public class GrapnelScript : MonoBehaviour {
         if(target != null)
         {
             Vector3 dir = target.transform.position - transform.position;
-            if(dir.sqrMagnitude > 1.0f)
+            float dirSpeed = dir.sqrMagnitude;
+            if (dirSpeed > 1.0f)
             {
                 if(movePlayer)
                 {
-                    transform.Translate(dir.normalized * Time.deltaTime * 100);
+                    transform.Translate((dir.normalized) * (Time.deltaTime * 10), Space.World);
                 }
                 else
                 {
-                    target.transform.Translate(-dir.normalized * Time.deltaTime * 100);
+                    target.transform.Translate(-(dir.normalized) * (Time.deltaTime * 10), Space.World);
                 }
             }
             else

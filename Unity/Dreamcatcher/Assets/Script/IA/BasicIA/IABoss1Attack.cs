@@ -11,7 +11,7 @@ public class IABoss1Attack : IABasicAttack
 	}
 
 
-	IEnumerator AttackCoroutine()
+	protected override IEnumerator AttackCoroutine()
 	{
 		m_renderer.material.color = new Color (1.0f, 0, 0);
 		yield return new WaitForSeconds (0.2f);

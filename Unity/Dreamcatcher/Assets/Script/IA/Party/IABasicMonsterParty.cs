@@ -9,7 +9,7 @@ public class IABasicMonsterParty : IAMonsterParty
 	bool orderToAttack = false;
 	bool canSetOrderToAttack = true;
 
-	public virtual IADecision	getPartyDecision(IAScript script)
+	public override IADecision	getPartyDecision(IAScript script)
 	{
 		if (members.Count < 3) // décision de se défendre si le groupe n'a pas assez de membres par exemple
 		{
@@ -30,7 +30,7 @@ public class IABasicMonsterParty : IAMonsterParty
 			if (orderToAttack)
 				return new IADecision(IADecisionType.ATTACK, Random.Range(0, script.NbAttacks) );
 			else 
-				return new IADecision(IADecisionType.DEFEND, Random.Range(0, script.NbDefends));
+				return new IADecision(IADecisionType.DEFEND, Random.Range(0, script.NbDefends), 0.1f);
 		}
 	}
 
@@ -72,8 +72,7 @@ public class IABasicMonsterParty : IAMonsterParty
 	// Use this for initialization
 	void Start ()
 	{
-	
-
+		members = new List<IAScript> ();	
 	}
 
 

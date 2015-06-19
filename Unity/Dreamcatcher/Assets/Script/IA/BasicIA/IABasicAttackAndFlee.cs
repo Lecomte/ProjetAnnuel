@@ -5,7 +5,7 @@ public class IABasicAttackAndFlee : IABasicAttack
 {
 
 
-	protected virtual IEnumerator AttackCoroutine()
+	protected override IEnumerator AttackCoroutine()
 	{
 		weaponAnimator.SetBool ("isAttacking", true);
 		stats.isAttacking = true;
@@ -19,9 +19,6 @@ public class IABasicAttackAndFlee : IABasicAttack
 		{
 			Vector3 direction = (target.transform.position - transform.position);
 			direction.y = 0;
-			
-			float dist = direction.sqrMagnitude;
-			
 			direction.Normalize ();
 
 			this.transform.position -= direction * Time.deltaTime * 10;

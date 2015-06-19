@@ -17,9 +17,15 @@ public class IABasicDefense : IABehaviour {
 	
 	}
 
+	float time = 2f;
+	public override void SetOptionsFromDecision(IADecision decision)
+	{
+		time = decision.Time;
+	}
+
 	public override float Act()
 	{
-		stats.TemporaryIncreaseResistance ( 10, 2f);
+		stats.TemporaryIncreaseResistance ( 10, time);
 		return 2f;
 	}
 }

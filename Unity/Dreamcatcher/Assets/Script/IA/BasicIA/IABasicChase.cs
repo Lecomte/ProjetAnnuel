@@ -20,7 +20,7 @@ public class IABasicChase : IABehaviour
 		
 	}
 
-	public void SetOptionsFromDecision(IADecision decision) 
+	public override void SetOptionsFromDecision(IADecision decision) 
 	{
 
 		if (decision is IADecisionChase)

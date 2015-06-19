@@ -10,6 +10,11 @@ public class UnitManager : MonoBehaviour {
 	[SerializeField]
 	public List<ColliderEntityClass> 					colliderPlayerList;
 
+	[SerializeField]
+	public List<PartyAndId> 							partyAndIds;
+
+	public Dictionary<int, IAMonsterParty> 				monsterPartys;
+
 	public Dictionary<Collider, EntityStatisticScript> 	EntityDictionary;
 	public Dictionary<Collider, EntityStatisticScript>  PlayerDictionary;
 
@@ -20,7 +25,16 @@ public class UnitManager : MonoBehaviour {
 	
 	private Dictionary<int, List<Collider> >			UnusedUnits;
 	private List <Collider> 							ActiveUnits;
-	
+
+	public IAMonsterParty getMonsterParty( int id_party)
+	{
+		if (!monsterPartys.ContainsKey (id_party)) {			
+			return null;			
+		}
+
+		return monsterPartys [id_party];
+	}
+
 	public void Start()
 	{
 		CreateEntityDictionary ();
@@ -29,6 +43,10 @@ public class UnitManager : MonoBehaviour {
 	
 	public void CreateEntityDictionary()
 	{
+		monsterPartys = new Dictionary<int, IAMonsterParty> ();
+		foreach (var pid in partyAndIds)
+			monsterPartys.Add (pid.id, pid.party);
+
 		this.PlayerDictionary = new Dictionary<Collider, EntityStatisticScript>(colliderEntityList.Count);
 		this.EntityDictionary = new Dictionary<Collider, EntityStatisticScript>(colliderPlayerList.Count);
 		this.ColliderDictionary = new Dictionary<EntityStatisticScript, Collider>(colliderEntityList.Count);

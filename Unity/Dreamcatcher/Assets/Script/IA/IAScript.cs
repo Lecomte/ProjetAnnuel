@@ -29,11 +29,22 @@ public class IAScript : MonoBehaviour {
 	[SerializeField]
 	List <IABehaviour> specials;
 
+	
+	[SerializeField]
+	List <IABasicChase> chases;
+
+	public IADecision lastDecisionMade;
+
+
 	public int NbAttacks { get { return attacks.Count; } }
 	public int NbDefends { get { return defends.Count; } }
 	public int NbFlees 	 { get { return flees.Count; } }
 	public int NbSpecials { get { return specials.Count; } }
 
+	public bool isDead()
+	{
+		return stats.getCurrentHealth () <= 0;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -45,11 +56,12 @@ public class IAScript : MonoBehaviour {
 		
 	}
 
+
 	IEnumerator IA() {
 
 		while (true) 
 		{
-			IADecision decision = brain.MakeDecision( this );
+			IADecision decision = lastDecisionMade = brain.MakeDecision( this );
 
 			float tps = -1;
 
@@ -59,12 +71,14 @@ public class IAScript : MonoBehaviour {
 				{
 					case IADecisionType.ATTACK : 
 
+					attacks[decision.Numero].SetOptionsFromDecision (decision);
 					tps = attacks[decision.Numero].Act();
 
 					break;
 
 					case IADecisionType.DEFEND : 
 
+					defends[decision.Numero].SetOptionsFromDecision (decision);
 					tps = defends[decision.Numero].Act();
 						
 					break;
@@ -77,20 +91,36 @@ public class IAScript : MonoBehaviour {
 
 					case IADecisionType.FLEE : 
 						
+					flees[decision.Numero].SetOptionsFromDecision (decision);
 					tps = flees[decision.Numero].Act();
 
 					break;
 
 					case IADecisionType.SPECIAL : 
 						
+					specials[decision.Numero].SetOptionsFromDecision (decision);
 					tps = specials[decision.Numero].Act();
 						
+					break;
+
+					case IADecisionType.CHASE:
+
+					chases[decision.Numero].SetOptionsFromDecision (decision);
+
+					tps = chases[decision.Numero].Act();
+
+					break;
+
+					default:
+						
+					tps = 0;	
+
 					break;
 				}
 			
 				if (tps <= -1)
 					yield return new WaitForFixedUpdate();
-				else if (tps > 0)
+				else if (tps > 0.0f)
 					yield return new WaitForSeconds(tps);
 			}
 

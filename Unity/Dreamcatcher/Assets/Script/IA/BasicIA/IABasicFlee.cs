@@ -25,7 +25,7 @@ public class IABasicFlee : IABehaviour
 		dir.x = Mathf.Cos(angle);
 		dir.z = -Mathf.Sin(angle); // sin(angle)² + cos(angle)² = 1 => |dir| = 1;  CQFD
 		
-		while (time < 2.0)
+		while (time < 1.8)
 		{					
 			this.transform.position += dir * Time.fixedDeltaTime * 10;
 			this.transform.LookAt(this.transform.position - dir);

@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 		spawnUnits = true;
 		// battleManager.EnemyDeathEvent.AddListener (spawnManager.OnUnitDeath);
 
-		dancefloor_origin = danceFloor.transform.position;
+		dancefloor_origin =  danceFloor.GetComponent<Renderer> ().bounds.min;
 		dancefloor_size = danceFloor.GetComponent<Renderer> ().bounds.size; // évite le getcomponent dans la coroutine, pas moyen d'accèder directement  "renderer"
 
 		StartCoroutine ("SpawnCoroutine");
@@ -62,7 +62,7 @@ public class LevelManager : MonoBehaviour
 
 			InitStats ( (MobStatisticScript) unitManager.EntityDictionary [collider]);
 			collider.gameObject.SetActive (true);
-			collider.gameObject.transform.position = new Vector3 (Random.Range (dancefloor_origin.x, dancefloor_origin.x + dancefloor_size.x), 0, Random.Range (dancefloor_origin.y, dancefloor_origin.z + dancefloor_size.z)); 
+			collider.gameObject.transform.position = new Vector3 (Random.Range (dancefloor_origin.x, dancefloor_origin.x + dancefloor_size.x), 0, Random.Range (dancefloor_origin.z, dancefloor_origin.z + dancefloor_size.z)); 
 			battleManager.fireEnemySpawnEvent (1);	
 		
 		}

@@ -34,7 +34,7 @@ public class IABasicBrain : IAMakeDecision // cerveau basique fonctionnant de fa
 					decisionType = IADecisionType.DO_NOTHING;
 					nbPossibility = 1;
 				break;
-
+				/*
 				case 3:
 					decisionType = IADecisionType.SPECIAL;
 					nbPossibility = ia.NbSpecials;
@@ -44,7 +44,7 @@ public class IABasicBrain : IAMakeDecision // cerveau basique fonctionnant de fa
 					decisionType = IADecisionType.FLEE;
 					nbPossibility = ia.NbFlees;
 				break;
-
+				*/
 				default:
 					decisionType = IADecisionType.DO_NOTHING;
 					decision = -1;		

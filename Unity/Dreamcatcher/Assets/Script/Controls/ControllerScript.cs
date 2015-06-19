@@ -10,14 +10,15 @@ public class ControllerScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         Vector3 direction = new Vector3(Input.GetAxis("L_XAxis_1"), 0, -Input.GetAxis("L_YAxis_1"));
         if (direction.magnitude > 1.0f)
         {
             direction.Normalize();
         }
-        transform.Translate(direction * Time.deltaTime * playerSpeed);
+
+        transform.Translate(direction * Time.fixedDeltaTime * playerSpeed);
     }
 
 

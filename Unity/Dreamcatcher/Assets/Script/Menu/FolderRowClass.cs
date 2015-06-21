@@ -8,7 +8,10 @@ public class FolderRowClass : MonoBehaviour {
     public InputField inputField;
     public Button button;
 
-    public UnityEvent<string> openClickEvent = new UnityEvent<string>();
+    public IntBoolEvent changeStateEvent = new IntBoolEvent();
+    public UnityEvent<string> openClickEvent = new StringEvent();
+
+    public int Index;
 
     public void visibleRowState(bool value)
     {
@@ -21,10 +24,10 @@ public class FolderRowClass : MonoBehaviour {
     {
         isActive = this.toggle.isOn;
         string name = this.inputField.text;
+        if (changeStateEvent != null)
+            changeStateEvent.Invoke(Index,isActive);
         Debug.Log(name + " is active : " + isActive);
     }
-
-
 
     public void OpenClick()
     {

@@ -22,7 +22,7 @@ Material:
       data:
         first:
           name: _Intensity1
-        second: .000842963229
+        second: .00040134872
       data:
         first:
           name: _Intensity2
@@ -42,7 +42,7 @@ Material:
       data:
         first:
           name: _Intensity6
-        second: .000513407402
+        second: .000939037884
       data:
         first:
           name: _Intensity7
@@ -50,7 +50,7 @@ Material:
       data:
         first:
           name: _Intensity8
-        second: .000345537323
+        second: .000305097434
       data:
         first:
           name: _Intensity9

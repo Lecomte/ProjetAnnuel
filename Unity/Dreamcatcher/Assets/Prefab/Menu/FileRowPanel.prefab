@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22486102}
   - 222: {fileID: 22227094}
   - 114: {fileID: 11420634}
+  - 114: {fileID: 11460540}
   m_Layer: 5
   m_Name: FileRowPanel
   m_TagString: Untagged
@@ -107,7 +108,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11424786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11460540}
+        m_MethodName: DeleteOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11420634
@@ -152,6 +165,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11460540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5e5809cd6ab9d41bb8fa3417409c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 11485892}
+  removeButton: {fileID: 11402658}
 --- !u!114 &11478096
 MonoBehaviour:
   m_ObjectHideFlags: 1

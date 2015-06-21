@@ -2,17 +2,22 @@
 using System;
 using System.Collections;
 
-public class EntityStatisticScript : MonoBehaviour {
+public abstract class EntityStatisticScript : MonoBehaviour {
 
-    public int MaxHealth;
-    public int CurrentHealth;
-    public int Damage;
-    public int Resistance;
+    [SerializeField]
+    protected int MaxHealth;
+    [SerializeField]
+    protected int CurrentHealth;
+    [SerializeField]
+    protected int Damage;
 
-    public void TakeDamage(int damage)
-    {
-        this.CurrentHealth -= damage - this.Resistance;
-    }
+	[SerializeField]
+	protected int EntityType; // à garder pour identifier lors du pulling
+
+	[SerializeField]
+	protected UnitManager unitManager; // Lorsque l'on prends des dégats et qu'on meurt, il faut prévenir de la mort de l'unité
+
+    public abstract void TakeDamage(int damage);
 
     public void TemporaryIncreaseDamage(int value, int secondes)
     {
@@ -39,4 +44,19 @@ public class EntityStatisticScript : MonoBehaviour {
         yield return new WaitForSeconds(secondes);
         function(value);
     }
+
+    public int getDamage()
+    {
+        return Damage;
+    }
+
+	public int getCurrentHealth()
+	{
+		return CurrentHealth;
+	}
+
+	public int getEntityType()
+	{
+		return EntityType;
+	}
 }

@@ -39,4 +39,6 @@ public class EventManager : MonoBehaviour {
         if (this.StopGameEvent != null)
             this.StopGameEvent.Invoke();
     }
+	
+
 }

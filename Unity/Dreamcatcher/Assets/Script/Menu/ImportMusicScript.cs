@@ -9,6 +9,8 @@ using System.Threading;
 using System.Collections.Generic;
 using System;
 
+using System.Runtime.InteropServices;
+
 public class ImportMusicScript : MonoBehaviour {
 
     private Dictionary<int,FolderBufferClass> _allFolderList;
@@ -39,6 +41,9 @@ public class ImportMusicScript : MonoBehaviour {
 
     [SerializeField]
     private GameObject previousPanel;
+
+    [DllImport("user32.dll")]
+    private static extern void FolderBrowserDialog();
 
     private bool hasChanges = false;
 
@@ -195,14 +200,26 @@ public class ImportMusicScript : MonoBehaviour {
             this.FileRowList[i - beginNumber].visibleRowState(true);
             this.FileRowList[i - beginNumber].deleteClickEvent.AddListener(deleteFile);
         }
+        changeIndexPagesFile();
     }
 
     public void ImportNewFile()
     {
-        string selectedFolder = EditorUtility.OpenFolderPanel("Choose your music","","");
-        if (selectedFolder == "") return;
-        string destFolder = EditorUtility.OpenFolderPanel("Choose your music", this._folderSource, "");
-        if (destFolder == "") return;
+        //string selectedFolder = EditorUtility.OpenFolderPanel("Choose your music","","");
+        string selectedFolder="";
+        string destFolder="";
+        //
+        System.Windows.Forms.FolderBrowserDialog sfd = new System.Windows.Forms.FolderBrowserDialog();
+        sfd.RootFolder = Environment.SpecialFolder.MyMusic;
+        if (sfd.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+            return;
+        selectedFolder = sfd.SelectedPath;
+        //
+        sfd.RootFolder = Environment.SpecialFolder.MyComputer;
+        sfd.SelectedPath = this._folderSource + "/";
+        if (sfd.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+            return;
+        destFolder = sfd.SelectedPath;
         List<string> importedFile = new List<string>();
         foreach(string ext in supportedSoundExtension)
         {

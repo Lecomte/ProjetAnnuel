@@ -18,67 +18,67 @@ Material:
       data:
         first:
           name: _Intensity0
-        second: .000680484634
+        second: .578284264
       data:
         first:
           name: _Intensity1
-        second: .00040134872
+        second: .888735056
       data:
         first:
           name: _Intensity2
-        second: .000509037694
+        second: .702712178
       data:
         first:
           name: _Intensity3
-        second: .000469089166
+        second: .503036678
       data:
         first:
           name: _Intensity4
-        second: .000492679421
+        second: .504200935
       data:
         first:
           name: _Intensity5
-        second: .000383215462
+        second: .490642071
       data:
         first:
           name: _Intensity6
-        second: .000939037884
+        second: .416421384
       data:
         first:
           name: _Intensity7
-        second: .000401186349
+        second: .566544533
       data:
         first:
           name: _Intensity8
-        second: .000305097434
+        second: 1.7142781
       data:
         first:
           name: _Intensity9
-        second: .000484442309
+        second: 1.4561007
       data:
         first:
           name: _Intensity10
-        second: .000392405433
+        second: 1.25028312
       data:
         first:
           name: _Intensity11
-        second: .000303196575
+        second: 1.13043499
       data:
         first:
           name: _Intensity12
-        second: .000270143471
+        second: 1.25128555
       data:
         first:
           name: _Intensity13
-        second: .000289197604
+        second: .825884819
       data:
         first:
           name: _Intensity14
-        second: .000182630421
+        second: .606773138
       data:
         first:
           name: _Intensity15
-        second: .000152940222
+        second: 1.4518292
       data:
         first:
           name: _ColumnWidth

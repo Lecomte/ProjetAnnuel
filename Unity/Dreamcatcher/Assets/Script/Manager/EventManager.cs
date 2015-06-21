@@ -10,6 +10,11 @@ public class EventManager : MonoBehaviour {
     public UnityEvent RoundEndEvent;
     public UnityEvent StopGameEvent;
     
+    void Start()
+    {
+        fireGameStartEvent();
+    }
+
     public void fireGameStartEvent()
     {
         if (this.GameStartEvent != null)

@@ -4370,7 +4370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afbca4be9e2133349997d118cb9a167b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 0}
+  collider: {fileID: 1485800675}
   script: {fileID: 1485800674}
 --- !u!114 &1496546208
 MonoBehaviour:

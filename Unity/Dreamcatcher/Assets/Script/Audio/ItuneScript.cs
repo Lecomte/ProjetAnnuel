@@ -2,44 +2,52 @@
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
+using System.Threading;
 
 public class ItuneScript : MonoBehaviour {
 
     public AudioSource source;
-    public bool forceChange;
-
+    private string streamingPath;
 
     private string configFolderName = @"\configSong.txt";
     private List<AudioClip> itunes;
 
     void Awake()
     {
+        streamingPath = Application.streamingAssetsPath;
         itunes = new List<AudioClip>();
+    }
+
+    public void StartLoadSong()
+    {
+        Thread t = new Thread(loadAllEnableSound);
+        t.Start();
     }
 
     public void loadAllEnableSound()
     {
-        string[] enableFolder = System.IO.File.ReadAllText(Application.streamingAssetsPath + configFolderName).Split(';');
+        AudioClip clip;
+        string[] enableFolder = System.IO.File.ReadAllText(streamingPath + configFolderName).Split(';');
         foreach(string folder in enableFolder)
         {
-            string[] fileList = Directory.GetFiles(Application.streamingAssetsPath + "/" + folder,"*.ogg");
+            string[] fileList = Directory.GetFiles(streamingPath + "/" + folder, "*.ogg");
             foreach(string fileName in fileList)
             {
-                WWW dowloader = new WWW(Application.streamingAssetsPath + "/" + folder + "/" + fileName);
-                itunes.Add(dowloader.GetAudioClip(false,false,AudioType.OGGVORBIS));
+                WWW dowloader = new WWW("file://" + fileName);
+                while (!dowloader.isDone) { Thread.Sleep(1000); }
+                clip = dowloader.GetAudioClip(false,false);
+                if(clip.loadState == AudioDataLoadState.Loaded)
+                    itunes.Add(clip);
             }
         }
-        Debug.Log("All download : " + itunes.Count);
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (forceChange || (source.clip.loadState == AudioDataLoadState.Loaded && !source.isPlaying && itunes.Count > 0))
+        if (!source.isPlaying && itunes.Count > 0)
         {
             source.clip = GetNextSong();
             source.Play();
-            forceChange = false;
-            Debug.Log("play new sound");
         }
     }
 

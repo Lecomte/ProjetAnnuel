@@ -1783,7 +1783,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 344431961}
-  forceChange: 0
 --- !u!1001 &356347379
 Prefab:
   m_ObjectHideFlags: 0

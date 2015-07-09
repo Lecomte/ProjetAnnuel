@@ -11,7 +11,7 @@ public class OnHitMobScript : MonoBehaviour
     [SerializeField]
     private Animator animator;
     [SerializeField]
-    private EntityStatisticScript stats; // les stats du joueur pour pouvoir enlever les degats
+    private PlayerStatisticScript stats; // les stats du joueur pour pouvoir enlever les degats
     [SerializeField]
     private UnitManager unitManager;
     [SerializeField]
@@ -38,5 +38,6 @@ public class OnHitMobScript : MonoBehaviour
                     animator.SetInteger("ActionPoints", animator.GetInteger("ActionPoints")+1);
             }
         }
+        stats.AddComboPoints(animator.GetInteger("comboPoints"));
     }
 }

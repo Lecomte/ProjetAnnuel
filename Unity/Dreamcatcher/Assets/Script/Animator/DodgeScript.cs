@@ -18,6 +18,8 @@ public class DodgeScript : StateMachineBehaviour
     {
         Vector3 direction = new Vector3(Input.GetAxis("L_XAxis_1"), 0, -Input.GetAxis("L_YAxis_1"));
         direction.Normalize();
+		if(direction == Vector3.zero)
+			direction = Vector3.forward;
         animator.gameObject.transform.parent.Translate(direction * Time.deltaTime * dodgeSpeed);
         Debug.Log(animator.gameObject.transform.parent);
         Debug.Log(direction * Time.deltaTime * dodgeSpeed);

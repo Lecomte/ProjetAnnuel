@@ -9,12 +9,14 @@ public class AnimatorControllerScript : StateMachineBehaviour {
     private float startTime;
     public string name;
     public float damageCoeff;
+    public float comboPoints;
     public float animTime = 2.0f;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetFloat("DamageCoeff", damageCoeff);
+        animator.SetFloat("ComboPoints", comboPoints);
         if (!startState || (animator.GetInteger("Button") == 1 && animator.GetInteger("ActionPoints") == 0))
         {
             animator.SetInteger("Button", 0);

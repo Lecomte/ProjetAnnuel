@@ -13,43 +13,49 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Animating
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isRunning
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isWalking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: stopActions
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: DamageCoeff
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ActionPoints
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: ComboPoints
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Run
@@ -104,6 +110,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B_B_B
   damageCoeff: 1.29999995
+  comboPoints: 200
   animTime: 1.5
 --- !u!114 &11407026
 MonoBehaviour:
@@ -121,6 +128,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y_Y_B
   damageCoeff: 1.29999995
+  comboPoints: 250
   animTime: 1
 --- !u!114 &11408234
 MonoBehaviour:
@@ -138,6 +146,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y_Y
   damageCoeff: 1.20000005
+  comboPoints: 150
   animTime: 1
 --- !u!114 &11411682
 MonoBehaviour:
@@ -179,6 +188,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B_B
   damageCoeff: 1.20000005
+  comboPoints: 150
   animTime: 1.5
 --- !u!114 &11425742
 MonoBehaviour:
@@ -196,6 +206,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_B
   damageCoeff: 1.10000002
+  comboPoints: 100
   animTime: 1
 --- !u!114 &11430164
 MonoBehaviour:
@@ -213,6 +224,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B_Y_Y
   damageCoeff: 1.29999995
+  comboPoints: 250
   animTime: 1
 --- !u!114 &11431644
 MonoBehaviour:
@@ -230,6 +242,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_Y_Y
   damageCoeff: 1.39999998
+  comboPoints: 150
   animTime: 1
 --- !u!114 &11431822
 MonoBehaviour:
@@ -247,6 +260,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B
   damageCoeff: 1
+  comboPoints: 100
   animTime: 1.5
 --- !u!114 &11435026
 MonoBehaviour:
@@ -264,6 +278,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: X
   damageCoeff: 1
+  comboPoints: 50
   animTime: 2.04999995
 --- !u!114 &11440798
 MonoBehaviour:
@@ -281,6 +296,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_X_X
   damageCoeff: 1
+  comboPoints: 100
   animTime: 1
 --- !u!114 &11445754
 MonoBehaviour:
@@ -298,6 +314,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B_Y_B
   damageCoeff: 1.29999995
+  comboPoints: 300
   animTime: 1
 --- !u!114 &11457222
 MonoBehaviour:
@@ -327,6 +344,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: X_X_X
   damageCoeff: 1.29999995
+  comboPoints: 150
   animTime: 2.04999995
 --- !u!114 &11465290
 MonoBehaviour:
@@ -344,6 +362,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B_B_Y
   damageCoeff: 1.29999995
+  comboPoints: 250
   animTime: 1
 --- !u!114 &11471320
 MonoBehaviour:
@@ -361,6 +380,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y_B_B
   damageCoeff: 1.29999995
+  comboPoints: 250
   animTime: 1
 --- !u!114 &11472186
 MonoBehaviour:
@@ -402,6 +422,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_Y_B
   damageCoeff: 1.5
+  comboPoints: 200
   animTime: 1
 --- !u!114 &11479516
 MonoBehaviour:
@@ -419,6 +440,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: X_X
   damageCoeff: 1.20000005
+  comboPoints: 100
   animTime: 2.04999995
 --- !u!114 &11480902
 MonoBehaviour:
@@ -436,6 +458,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_X
   damageCoeff: 1
+  comboPoints: 50
   animTime: 1
 --- !u!114 &11481950
 MonoBehaviour:
@@ -453,6 +476,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y_B
   damageCoeff: 1.20000005
+  comboPoints: 200
   animTime: 1
 --- !u!114 &11482266
 MonoBehaviour:
@@ -470,6 +494,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 0
   name: Static
   damageCoeff: 0
+  comboPoints: 0
   animTime: 4
 --- !u!114 &11483736
 MonoBehaviour:
@@ -487,6 +512,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_B_Y
   damageCoeff: 1.5
+  comboPoints: 200
   animTime: 1
 --- !u!114 &11484366
 MonoBehaviour:
@@ -504,6 +530,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y_B_Y
   damageCoeff: 1.29999995
+  comboPoints: 300
   animTime: 1
 --- !u!114 &11491838
 MonoBehaviour:
@@ -521,6 +548,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A
   damageCoeff: 0
+  comboPoints: 0
   animTime: .100000001
 --- !u!114 &11492422
 MonoBehaviour:
@@ -538,6 +566,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y
   damageCoeff: 1
+  comboPoints: 100
   animTime: 1
 --- !u!114 &11492980
 MonoBehaviour:
@@ -555,6 +584,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_Y
   damageCoeff: 1.10000002
+  comboPoints: 100
   animTime: 1
 --- !u!114 &11496188
 MonoBehaviour:
@@ -572,6 +602,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: Y_Y_Y
   damageCoeff: 1.29999995
+  comboPoints: 200
   animTime: 1
 --- !u!114 &11497328
 MonoBehaviour:
@@ -589,6 +620,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: B_Y
   damageCoeff: 1.20000005
+  comboPoints: 200
   animTime: 1
 --- !u!114 &11497958
 MonoBehaviour:
@@ -606,6 +638,7 @@ MonoBehaviour:
   needToWaitBeforeChange: 1
   name: A_B_B
   damageCoeff: 1.39999998
+  comboPoints: 150
   animTime: 1
 --- !u!1101 &110101910
 AnimatorStateTransition:
@@ -2785,7 +2818,7 @@ AnimatorStateMachine:
     m_Position: {x: 888, y: 228, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110247480}
-    m_Position: {x: 900, y: 300, z: 0}
+    m_Position: {x: 888, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110272596}
     m_Position: {x: 108, y: 492, z: 0}

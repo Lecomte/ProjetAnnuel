@@ -28,7 +28,7 @@ public class AutocamScript : MonoBehaviour {
     private List<Collider> units;
     private bool changed = false;
 	
-    void Start()
+    public void Initialize()
     {
         cameraBaseRotation = camera.localRotation;
     }

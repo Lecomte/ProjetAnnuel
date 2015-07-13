@@ -17,13 +17,6 @@ public class OnHitMobScript : MonoBehaviour
     [SerializeField]
     private HitMobEvent eventToFire;
 
-    void Start()
-    {
-        Debug.Log("Hello On collision");
-        if (eventToFire == null)
-            Debug.Log("Aucun event renseigné.");
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == _layer || collision.gameObject.layer == _weaponLayer)

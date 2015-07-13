@@ -14,11 +14,6 @@ public class BattleManager : MonoBehaviour {
     [SerializeField]
     private UnitManager 		unitManager;
 
-	public void Start()
-	{
-
-	}
-
 	public void fireEnemySpawnEvent( int type)
 	{
 		if (this.EnemySpawnEvent != null)

@@ -251,7 +251,6 @@ public class ImportMusicScript : MonoBehaviour {
 
     public void ImportNewFile()
     {
-        //string selectedFolder = EditorUtility.OpenFolderPanel("Choose your music","","");
         string selectedFolder="";
         string destFolder="";
         //
@@ -291,7 +290,6 @@ public class ImportMusicScript : MonoBehaviour {
         string fileName = "";
         System.Diagnostics.Process process = new System.Diagnostics.Process();
         System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo(ffmegPath);
-        //startInfo.UseShellExecute = false;
         startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
         int i = 0;
         foreach (string filePath in importFile)
@@ -306,12 +304,10 @@ public class ImportMusicScript : MonoBehaviour {
                 Thread.Sleep(1000);
             i++;
             NumberImported = i;
-            //Debug.Log(i + "/" + importFile.Count + " imported");
         }
         process.Close();
         OneLastEnter = true;
         isImporting = false;
-        //this.Invoke("reloadFolder", 0f);
     }
 
     private void reloadFolder()
@@ -335,13 +331,11 @@ public class ImportMusicScript : MonoBehaviour {
         }
         File.WriteAllText(this._folderSource + configFileName, text.Substring(0,text.Length-1));
         hasChanges = false;
-        Debug.Log("Saved");
     }
 
     public void deleteFile(string fileName)
     {
         string path = this._folderSource + "/" + this._currentRepoName + "/" + fileName;
-        Debug.Log("Delete :" + path);
         File.Delete(path);
         loadRepoContent(this._currentRepoName);
     }

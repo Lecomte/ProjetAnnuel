@@ -26,10 +26,10 @@ public class LevelManager : MonoBehaviour
 	private float intensity = 15f;
 
 
-	public void Start()
+	/*public void Start()
 	{
 		Init (); // je sais pas quand tu veux appeler les fonctions d'init alors je fous là en attendant pour que ça se lance quand je lance le projet
-	}
+	}*/
 
 	public void Init()
 	{

@@ -13,14 +13,6 @@ public class LigthManager : MonoBehaviour {
     [SerializeField]
     private float RotationSpeed=1.0f;
 
-    //on pose x : cos
-    //z : sin
-
-    void Start()
-    {
-        DisposeLight();
-    }
-
     public void DisposeLight()
     {
         float angleStep = 360 / LightArray.Count;

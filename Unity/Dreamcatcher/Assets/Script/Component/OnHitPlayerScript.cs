@@ -18,13 +18,6 @@ public class OnHitPlayerScript : MonoBehaviour {
     [SerializeField]
 	private HitMobEvent eventToFire;
 
-
-    void Start()
-    {
-        if (eventToFire == null)
-            Debug.Log("Aucun event renseigné.");
-    }
-
 	void OnCollisionEnter(Collision collision)
     {
 		if (!attacker_script.isAttacking) // l'attaquant n'attaque pas, pas de degats

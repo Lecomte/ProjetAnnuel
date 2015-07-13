@@ -9,19 +9,19 @@ public class BulletManager : MonoBehaviour
     private List<BulletUpdateScript> bullets;
     private IEnumerator<BulletUpdateScript> enumBullets;
 
-    public void Start()
+    public void Initialize()
     {
         enumBullets = bullets.GetEnumerator();
     }
 
-    public void SpawnBullet(Vector3 posiiton, Vector3 direction, float bulletDamageCoeff)
+    public void SpawnBullet(Vector3 position, Vector3 direction, float bulletDamageCoeff)
     {
         if(!enumBullets.MoveNext())
         {
             enumBullets.Reset();
             enumBullets.MoveNext();
         }
-        enumBullets.Current.transform.position = posiiton;
+        enumBullets.Current.transform.position = position;
         enumBullets.Current.SetDirection(direction);
         enumBullets.Current.SetBulletDamage(bulletDamageCoeff);
         enumBullets.Current.gameObject.SetActive(true);

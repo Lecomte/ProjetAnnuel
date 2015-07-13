@@ -21,7 +21,7 @@ public class UnitManager : MonoBehaviour {
 	private Dictionary<int, List<Collider> >			UnusedUnits;
 	private List <Collider> 							ActiveUnits;
 	
-	public void Start()
+	public void Initialize()
 	{
 		CreateEntityDictionary ();
 		CreateUnusedUnitsDictionary ();

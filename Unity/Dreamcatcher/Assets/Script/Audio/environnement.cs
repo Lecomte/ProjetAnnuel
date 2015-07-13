@@ -9,14 +9,9 @@ public class environnement : MonoBehaviour {
     public int varColor=3;
     private AudioClip[] itunes;
 
-	// Use this for initialization
-	void Start () {
+	public void Initialize() {
         float z = -45;
         float x = 50;
-
-        //Debug.Log("start import music : " + Time.deltaTime);
-        //importMusic();
-        //Debug.Log("end import music : " + Time.deltaTime);
 
         listGameObject = new GameObject[64];
         
@@ -52,31 +47,6 @@ public class environnement : MonoBehaviour {
         InvokeRepeating("updateWall", 0.0f,0.07f );
 	}
 
-    /*void importMusic()
-    {
-        Object[] musicsAssets = Resources.LoadAll("Music");
-        itunes = new AudioClip[musicsAssets.Length];
-        AudioClip song;
-        int i = 0;
-        foreach (Object obj in musicsAssets)
-        {
-            song = (AudioClip)obj;
-            itunes[i] = song;
-            i++;
-        }
-        Debug.LogError("Nombre chargé : " + i);
-    }*/
-	
-    void Update()
-    {
-        /*if(!GetComponent<AudioSource>().isPlaying)
-        {
-            GetComponent<AudioSource>().clip = itunes[Random.Range(0,itunes.Length)];
-            GetComponent<AudioSource>().Play();
-        }*/
-    }
-
-	// Update is called once per frame
     void updateWall()
     {
         float[] channelRight = new float[precision];
@@ -97,30 +67,32 @@ public class environnement : MonoBehaviour {
             if (j % 2 == 0)
             {
                 baseNumber = j * refValue;
-                listGameObject[baseNumber].transform.position = new Vector3(listGameObject[baseNumber].transform.position.x, sum * 3, listGameObject[baseNumber].transform.position.z);
-                colorID = ((listGameObject[baseNumber].transform.position.y / 2) / varColor) * 5;
+                //listGameObject[baseNumber].transform.position = new Vector3(listGameObject[baseNumber].transform.position.x, sum * 3, listGameObject[baseNumber].transform.position.z);
+                listGameObject[baseNumber].transform.localScale = new Vector3(listGameObject[baseNumber].transform.localScale.x, 25 + sum * 6, listGameObject[baseNumber].transform.localScale.z);
+                colorID = (((listGameObject[baseNumber].transform.localScale.y - 25) / 4) / varColor) * 5;
                 listGameObject[baseNumber].GetComponentInChildren<Light>().color = returnColor(colorID);
                 for (i = refValue - 1; i > 0; i--)
                 {
                     int number = baseNumber + i;
-                    //Debug.Log("number : " + number);
-                    listGameObject[number].transform.position = new Vector3(listGameObject[number].transform.position.x, listGameObject[number - 1].transform.position.y, listGameObject[number].transform.position.z);
-                    colorID = ((listGameObject[number].transform.position.y / 2) / varColor) * 5;
+                    //listGameObject[number].transform.position = new Vector3(listGameObject[number].transform.position.x, listGameObject[number - 1].transform.position.y, listGameObject[number].transform.position.z);
+                    listGameObject[number].transform.localScale = new Vector3(listGameObject[number].transform.localScale.x, listGameObject[number - 1].transform.localScale.y, listGameObject[number].transform.localScale.z);
+                    colorID = (((listGameObject[number].transform.localScale.y - 25) / 4) / varColor) * 5;
                     listGameObject[number].GetComponentInChildren<Light>().color = returnColor(colorID);
                 }
             }
             else
             {
                 baseNumber = ((j + 1) * refValue) - 1;
-                listGameObject[baseNumber].transform.position = new Vector3(listGameObject[baseNumber].transform.position.x, sum * 3, listGameObject[baseNumber].transform.position.z);
-                colorID = ((listGameObject[baseNumber].transform.position.y / 2) / varColor) * 5;
+                //listGameObject[baseNumber].transform.position = new Vector3(listGameObject[baseNumber].transform.position.x, sum * 3, listGameObject[baseNumber].transform.position.z);
+                listGameObject[baseNumber].transform.localScale = new Vector3(listGameObject[baseNumber].transform.localScale.x, 25 + sum * 6, listGameObject[baseNumber].transform.localScale.z);
+                colorID = (((listGameObject[baseNumber].transform.localScale.y - 25) / 4) / varColor) * 5;
                 listGameObject[baseNumber].GetComponentInChildren<Light>().color = returnColor(colorID);
                 for (i = refValue - 1; i > 0; i--)
                 {
                     int number = baseNumber - i; 
-                    //Debug.Log("number : " + number);
-                    listGameObject[number].transform.position = new Vector3(listGameObject[number].transform.position.x, listGameObject[number + 1].transform.position.y, listGameObject[number].transform.position.z);
-                    colorID = ((listGameObject[number].transform.position.y / 2) / varColor) * 5;
+                    //listGameObject[number].transform.position = new Vector3(listGameObject[number].transform.position.x, listGameObject[number + 1].transform.position.y, listGameObject[number].transform.position.z);
+                    listGameObject[number].transform.localScale = new Vector3(listGameObject[number].transform.localScale.x, listGameObject[number + 1].transform.localScale.y, listGameObject[number].transform.localScale.z);
+                    colorID = (((listGameObject[number].transform.localScale.y-25) / 4) / varColor) * 5;
                     listGameObject[number].GetComponentInChildren<Light>().color = returnColor(colorID);
                 }
             }

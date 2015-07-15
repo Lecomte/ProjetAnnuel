@@ -9,6 +9,8 @@ public class environnement : MonoBehaviour {
     public int varColor=3;
     private AudioClip[] itunes;
 
+    public float intensity=0;
+
 	public void Initialize() {
         float z = -45;
         float x = 50;
@@ -59,6 +61,7 @@ public class environnement : MonoBehaviour {
         {
             sum += (channelRight[i] + channelLeft[i]);
         }
+        this.intensity = sum;
         float colorID;
         int refValue=64/4;
         int baseNumber;

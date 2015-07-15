@@ -15,6 +15,3 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
-
-MainScene.unity merge=ours
-MainSceneIA.unity merge=ours 

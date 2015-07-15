@@ -21,7 +21,7 @@ public class ControllerScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         Vector3 direction = new Vector3(Input.GetAxis("L_XAxis_1"), 0, -Input.GetAxis("L_YAxis_1"));
         float magnitude = direction.magnitude;
@@ -29,6 +29,7 @@ public class ControllerScript : MonoBehaviour {
         { 
             direction.Normalize();
         }
+		
         if (magnitude > 0.5f)
         {
             if (state != RunState.RUNNING)

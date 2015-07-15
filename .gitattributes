@@ -16,4 +16,5 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
-IAbeta.unity merge=ours
+MainScene.unity merge=ours
+MainSceneIA.unity merge=ours

@@ -86,7 +86,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: .166666672
     manualCellSize: 0
-  m_NavMeshData: {fileID: 23800000, guid: 1f251ec4bd569244b90fa240550a2ec8, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a909d0ad633640e4cae4986533632810, type: 2}
 --- !u!1 &17419031
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,15 +465,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderEntityList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 218139381}
+  - {fileID: 788501841}
+  - {fileID: 1401824219}
+  - {fileID: 1891276261}
   colliderPlayerList:
-  - {fileID: 0}
+  - {fileID: 1496546207}
   partyAndIds:
-  - {fileID: 0}
-  levelManager: {fileID: 0}
+  - {fileID: 853637281}
+  levelManager: {fileID: 1585113781}
 --- !u!1001 &43596151
 Prefab:
   m_ObjectHideFlags: 0
@@ -2200,9 +2200,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 344431960}
   - 82: {fileID: 344431961}
-  - 114: {fileID: 344431962}
   - 114: {fileID: 344431963}
   - 114: {fileID: 344431964}
+  - 114: {fileID: 344431962}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -2297,14 +2297,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 344431959}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d922449b34791468d8186aed403e69, type: 3}
+  m_Script: {fileID: 11500000, guid: 5097500dfd930364ca88db62a783d576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  varColor: 5
-  shader: {fileID: 2100000, guid: 707c9e4dafb36c842af808c389e0010e, type: 2}
-  audioSource: {fileID: 344431961}
+  bpm: 0
 --- !u!114 &344431963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,6 +2316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refCube: {fileID: 100002, guid: 66d7a5cf9b750e14cafb5e422a9d76ba, type: 2}
   varColor: 3
+  intensity: 0
 --- !u!114 &344431964
 MonoBehaviour:
   m_ObjectHideFlags: 0

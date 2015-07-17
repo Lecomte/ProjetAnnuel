@@ -18,7 +18,7 @@ public class ControllerScript : MonoBehaviour {
             direction.Normalize();
         }
 
-        transform.Translate(direction * Time.fixedDeltaTime * playerSpeed);
+        /*transform.Translate*/ this.transform.position += (direction * Time.fixedDeltaTime * playerSpeed);
     }
 
 

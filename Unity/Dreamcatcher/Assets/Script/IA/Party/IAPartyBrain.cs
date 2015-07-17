@@ -22,7 +22,7 @@ public class IAPartyBrain : IABasicBrain
 
 		if (decision == null) // le groupe n'existe pas ou il envoie null pour indiquer de prendre soi meme une decision
 		{
-			return new IADecision(IADecisionType.DEFEND,0);
+			return new IADecision(IADecisionType.DEFEND,0, 0.1f);
 			return base.MakeDecision(ia);
 		}
 

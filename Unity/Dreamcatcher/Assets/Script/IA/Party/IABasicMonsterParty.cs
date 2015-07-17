@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class IABasicMonsterParty : IAMonsterParty
 {
 	[SerializeField]
-	public int distNear = 20; // distance d'initialisation de l'attaque de groupe
+	public int distNear = 14; // distance d'initialisation de l'attaque de groupe
 	bool orderToAttack = false;
 	bool canSetOrderToAttack = true;
 
@@ -16,7 +16,7 @@ public class IABasicMonsterParty : IAMonsterParty
 			return new IADecision(IADecisionType.DEFEND, Random.Range(0,script.NbDefends) );
 		}
 
-		if (!orderToAttack && CountReadyToAttack () >= 2) 
+		if (!orderToAttack && CountReadyToAttack () >= 4) 
 		{
 			SetOrderToAttack();
 		}
@@ -39,7 +39,7 @@ public class IABasicMonsterParty : IAMonsterParty
 		int count = 0;
 
 		foreach (var script in members)
-		if ((script.transform.position - target.transform.position).sqrMagnitude < distNear + 2) 
+		if ((script.transform.position - target.transform.position).sqrMagnitude < distNear + 6) 
 		{
 			count++;
 		}
@@ -50,7 +50,7 @@ public class IABasicMonsterParty : IAMonsterParty
 
 	IEnumerator SetOffOrderLater()
 	{
-		yield return new WaitForSeconds (0.3f); // on donne l'ordre pendant un temps pour etre sur que tout le monde qui peut l'appliquer le recoive
+		yield return new WaitForSeconds (0.5f); // on donne l'ordre pendant un temps pour etre sur que tout le monde qui peut l'appliquer le recoive
 		orderToAttack = false;
 		yield return new WaitForSeconds (2.0f); // on arrete d'attaquer pendant 2s avant de pouvoir reattaquer
 		canSetOrderToAttack = true;

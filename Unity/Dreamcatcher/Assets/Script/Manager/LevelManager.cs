@@ -46,8 +46,8 @@ public class LevelManager : MonoBehaviour
 	{
 		while (true) { // game loop en cours
 
-			yield return new WaitForSeconds(1f);
-			//yield return new WaitForSeconds(60f / (1f+GetBPM())  );
+			// yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds( (60f / (1f+GetBPM())) * 4f  );
 			/*
 			while (!spawnUnits){
 				yield return new WaitForSeconds(0.2f);

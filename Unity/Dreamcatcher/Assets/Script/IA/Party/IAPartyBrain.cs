@@ -10,6 +10,7 @@ public class IAPartyBrain : IABasicBrain
 
 	public override IADecision MakeDecision(IAScript ia)
 	{
+		//return base.MakeDecision(ia);
 		if (party == null) 
 		{
 			party = ia.unitManager.getMonsterParty(id_party);	
@@ -22,7 +23,7 @@ public class IAPartyBrain : IABasicBrain
 
 		if (decision == null) // le groupe n'existe pas ou il envoie null pour indiquer de prendre soi meme une decision
 		{
-			return new IADecision(IADecisionType.DEFEND,0);
+			//return new IADecision(IADecisionType.DEFEND,0);
 			return base.MakeDecision(ia);
 		}
 

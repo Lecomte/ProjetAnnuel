@@ -21,7 +21,7 @@ public class IABasicAttack : IABehaviour
 	{
 		weaponAnimator.SetBool ("isAttacking", true);
 		stats.isAttacking = true;
-		yield return new WaitForSeconds (0.8f);
+		yield return new WaitForSeconds (1.2f);
 		stats.isAttacking = false;
 		weaponAnimator.SetBool ("isAttacking", false);
 	}
@@ -44,7 +44,7 @@ public class IABasicAttack : IABehaviour
 
 		StopCoroutine ("AttackCoroutine");
 		StartCoroutine ("AttackCoroutine");
-		return 1f;	
+		return 1.4f;	
 	}
 
 	// Update is called once per frame

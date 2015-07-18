@@ -13,6 +13,7 @@ public class IABasicMonsterParty : IAMonsterParty
 	{
 		if (members.Count < 3) // décision de se défendre si le groupe n'a pas assez de membres par exemple
 		{
+			Debug.Log ("party ia defnding because too few");
 			return new IADecision(IADecisionType.DEFEND, Random.Range(0,script.NbDefends) );
 		}
 
@@ -23,10 +24,12 @@ public class IABasicMonsterParty : IAMonsterParty
 
 		if ( (script.transform.position - target.transform.position).sqrMagnitude > distNear)
 		{
+			Debug.Log ("party ia chasing ");
 			return new IADecisionChase(0.03f, distNear);
 		}
 		else 
 		{
+			Debug.Log ("party ia is acting normly");
 			if (orderToAttack)
 				return new IADecision(IADecisionType.ATTACK, Random.Range(0, script.NbAttacks) );
 			else 

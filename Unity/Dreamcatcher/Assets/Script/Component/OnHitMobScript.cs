@@ -19,9 +19,10 @@ public class OnHitMobScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+		Debug.Log ("contact du poing du joueur avec un objet");
         if (collision.gameObject.layer == _layer || collision.gameObject.layer == _weaponLayer)
         {
-
+			Debug.Log ("contact du poing du joueur avec un objet compatible");
             if (eventToFire != null)
             {
 				Debug.Log("Collision fire " + collision.gameObject.layer + " == " + _layer + " - Damage : " + (int)animator.GetFloat("DamageCoeff") * stats.getDamage());

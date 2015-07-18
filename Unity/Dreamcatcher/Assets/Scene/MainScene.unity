@@ -1990,29 +1990,109 @@ Prefab:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 100140, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100138, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100156, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100148, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100130, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100146, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100154, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100128, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100136, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100118, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100116, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100134, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100144, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100152, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100126, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100132, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100150, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100114, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100142, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100106, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100124, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &327569647 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100124, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
-  m_PrefabInternal: {fileID: 327569646}
 --- !u!1 &327569648 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100050, guid: 6aa6d8ab9aff58a41ab090a1ca619905, type: 3}
   m_PrefabInternal: {fileID: 327569646}
---- !u!135 &327569649
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 327569647}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .100000001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &327569650
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2134,20 +2214,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8683ad233295826468f06e57f43644fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layer: 6
-  _weaponLayer: 7
+  _layer: 9
+  _weaponLayer: 10
   animator: {fileID: 1485800683}
   stats: {fileID: 1485800674}
   unitManager: {fileID: 36208609}
   eventToFire:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 36208609}
         m_MethodName: infligeDamageToCollider
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2169,28 +2250,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8683ad233295826468f06e57f43644fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _layer: 6
-  _weaponLayer: 7
+  _layer: 8
+  _weaponLayer: 11
   animator: {fileID: 1485800683}
   stats: {fileID: 1485800674}
   unitManager: {fileID: 36208609}
   eventToFire:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 36208609}
         m_MethodName: infligeDamageToCollider
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: HitMobEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!65 &327569667
-BoxCollider:
+--- !u!135 &327569667
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2199,8 +2281,50 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .200000003, y: .200000003, z: .200000003}
+  m_Radius: .200000003
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &327569668
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327569657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .200000003
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &327569669
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327569659}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &327569670
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327569657}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &344431959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,7 +4270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &788501830
 Transform:
   m_ObjectHideFlags: 0
@@ -4378,8 +4502,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
+  m_Radius: .709013939
+  m_Height: 2.47927094
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &788501845
@@ -6453,7 +6577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1831520320}
-  unitManager: {fileID: 0}
+  unitManager: {fileID: 36208609}
 --- !u!54 &1485800681
 Rigidbody:
   m_ObjectHideFlags: 0

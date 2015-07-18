@@ -72,7 +72,7 @@ public class UnitManager : MonoBehaviour {
 		foreach (ColliderEntityClass collider_entity_class in this.colliderEntityList) 
 		{
 			EntityStatisticScript unit = this.EntityDictionary [collider_entity_class.collider];
-			
+				
 			if (UnusedUnits.ContainsKey(unit.getEntityType()) )
 				UnusedUnits[unit.getEntityType()].Add(collider_entity_class.collider);
 			else 

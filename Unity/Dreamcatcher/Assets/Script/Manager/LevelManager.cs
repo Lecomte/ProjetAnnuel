@@ -4,7 +4,7 @@ using System.Collections;
 public class LevelManager : MonoBehaviour 
 {
 
-
+	[SerializeField]
 	public bool spawnUnits { get; set;}
 
 	Vector3 dancefloor_size;
@@ -46,11 +46,12 @@ public class LevelManager : MonoBehaviour
 	{
 		while (true) { // game loop en cours
 
-			yield return new WaitForSeconds(GetBPM()/60f );
-
+			yield return new WaitForSeconds(1f);
+			//yield return new WaitForSeconds(60f / (1f+GetBPM())  );
+			/*
 			while (!spawnUnits){
 				yield return new WaitForSeconds(0.2f);
-			}
+			}*/
 
 			Collider collider = null; 
 			collider = unitManager.PullUnit (1);

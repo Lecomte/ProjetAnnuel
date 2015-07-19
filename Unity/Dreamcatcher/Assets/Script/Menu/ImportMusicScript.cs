@@ -203,8 +203,10 @@ public class ImportMusicScript : MonoBehaviour {
     }
 
     private string removeSavePath;
+    private string repoSaveName;
     public void removeRepo(string repoName)
     {
+        repoSaveName = repoName;
         removeSavePath = this._folderSource + "/" + repoName;
         popupHandler.Instantiate("Are you sure to want to delete this repo ?", removeRepoReturnValue);
     }
@@ -220,6 +222,15 @@ public class ImportMusicScript : MonoBehaviour {
         }
         Directory.Delete(removeSavePath);
         Debug.Log("Delete Folder : " + removeSavePath);
+
+        string newContent="";
+        string[] contentConfig = File.ReadAllLines(this._folderSource + configFileName);
+        foreach(string folder in contentConfig[0].Split(';'))
+        {
+            if (folder != repoSaveName)
+                newContent += folder + ";";
+        }
+        File.WriteAllText(this._folderSource + configFileName, newContent);
         init();
     }
 

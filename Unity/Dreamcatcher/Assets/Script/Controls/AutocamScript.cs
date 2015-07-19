@@ -73,7 +73,7 @@ public class AutocamScript : MonoBehaviour {
     {
         if (destCollider)
         {
-			Vector3 dest = new Vector3(destCollider.transform.position.x, transform.position.y ,destCollider.transform.position.z)
+            Vector3 dest = new Vector3(destCollider.transform.position.x, transform.position.y, destCollider.transform.position.z);
             Quaternion targetRotationSocket = Quaternion.LookRotation(dest - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotationSocket, Time.deltaTime * autoCameraSpeed);
         }
